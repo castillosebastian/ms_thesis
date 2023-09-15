@@ -1,5 +1,7 @@
 ---
-title: "Aplicación de autoencoders variacionales para mejorar los procesos de optimización evolutiva multiobjetivo"
+title: "UTN - Maestría en Minería de Datos"
+subtitle: "Plan de Tesis"
+date: "Octubre 20223"
 format:
   pdf:
     code-fold: false
@@ -7,12 +9,13 @@ jupyter: python3
 bibliography: references.bib
 ---
 
-**UTN-Regional Paraná**\
-**Maestría en Minería de Datos: Plan de Tesis**\
-**Catedra: Seminario 2**
+### Título: "Aplicación de autoencoders variacionales para mejorar los procesos de optimización evolutiva multiobjetivo"
 
-**Alumno:** Claudio Sebastián Castillo\
-**Directores:** Dr. Matías Gerard y Dr. Leandro Vignolo
+## Directores: Dr. Matías Gerard y Dr. Leandro Vignolo (CONICET-UNL)
+
+### **Alumno: Lic. Claudio Sebastián Castillo (UTN)**
+
+\pagebreak
 
 ## Fundamentación y Justificación del tema
 
@@ -20,17 +23,27 @@ Los algoritmos evolutivos (en adelante AE) son métodos de optimización heurís
 
 La robustez de los AE está determinada, como bien sostiene Goldberg [-@goldbergdavide.GeneticAlgorithmsSearch1989], por una serie de características distintivas, que fortalecen su configuración de búsqueda, a saber: a) operan sobre un espacio *codificado* del problema y no sobre el espacio en su representación original; b) avanzan evaluando una *población de soluciones* y no soluciones individuales; c) tienen como guía una *función de aptitud* que no incluye derivación u otras funciones de cálculo; y d) suponen *reglas probabilísticas de transición* (operadores estocásticos) y no técnicas determinísticas. Estas características permiten a los AE superar restricciones que tienen otros métodos de optimización, condicionados -por ejemplo- a espacios de búsqueda continuos, diferenciables o unimodales. Por ello, su aplicación se ha extendido notablemente fuera del campo de la optimización, aplicándose en distintas tareas [@vieQualitiesChallengesFuture2021] y a lo largo de diversas industrias [@jiaoSurveyEvolutionaryMultiobjective2023].
 
-A pesar de su robustez los AE se enfrentan a problemas desafiantes cuando se aplican a *datasets* de alta dimensionalidad y bajo número de muestras. En efecto, como sucede con gran parte de los algoritmos de aprendizaje automático, en espacios de alta dimensionalidad la cardinalidad del conjunto de soluciones candidatas crece de manera exponencial, y los problemas se vuelven computacionalmente intratables. Así, por ejemplo, para un conjunto de `n` características es posible determinar un total de `n2` posibles soluciones, espacio que constituye un dominio de búsqueda difícil de cubrir aún con `n` conservadores.[^1] Por otro lado, la escasez de datos afecta gravemente el proceso de optimización, limitando la capacidad informativa de la función objetivo [@hastieElementStatisticalLearning2009]. En este sentido, la reconocida *maldición de la dimensionalidad*[^2] también acecha a los AE pues a medida que las soluciones ganan complejidad (atributos) se requieren mayor cantidad de muestras (datos) para que nuestra función objetivo aporte direcciones valiosas en el espacio de búsqueda [@hamadaDataDrivenAnalysisPareto2018].
+A pesar de su robustez los AE se enfrentan a problemas desafiantes cuando se aplican a *datasets* de alta dimensionalidad y bajo número de muestras. En efecto, como sucede con gran parte de los algoritmos de aprendizaje automático (en adelante AA), en espacios de alta dimensionalidad la cardinalidad del conjunto de soluciones candidatas crece de manera exponencial, y los problemas se vuelven computacionalmente intratables. Así, por ejemplo, para un conjunto de `n` características es posible determinar un total de `n2` posibles soluciones, espacio que constituye un dominio de búsqueda difícil de cubrir aún con `n` conservadores.[^1] Por otro lado, la escasez de datos afecta gravemente el proceso de optimización, limitando la capacidad informativa de la función objetivo [@hastieElementStatisticalLearning2009]. En este sentido, la reconocida *maldición de la dimensionalidad*[^2] también acecha a los AE pues a medida que las soluciones ganan complejidad (atributos) se requieren mayor cantidad de muestras (datos) para que la función objetivo aporte direcciones valiosas en el espacio de búsqueda y escape a soluciones subóptimas [@hamadaDataDrivenAnalysisPareto2018].
 
 [^1]: Por ejemplo para un dataset de 20 características (atributos) el número total de subconjuntos a evaluar supera el millón de posibles candidatos, específicamente: 1.048.576.
 
 [^2]: Termino acuñado por Richard Bellman (1961) y que en el mundo del *aprendizaje automático* refiere a los problemas y desafíos que presentan los datos organizados en espacios de altas dimensiones (múltiples atributos). En tales espacios, la cantidad de datos necesarios para proporcionar una representación estadísticamente confiable crece exponencialmente pues toda representación tendrá gran dispersión entre sus datos. Esto significa que para cualquier conjunto de individuos la distancia promedio entre ellos aumenta a medida que aumentan las dimensiones, haciendo que cada uno se separe de los otros cada vez más.
 
-Vemos que la disponibilidad de datos muestrales es un aspecto crítico de los algoritmos de aprendizaje automático en general y de los AE en particular, y su carencia ha disparado el surgimiento de diferentes estrategias de solución.
+Por lo dicho, la disponibilidad de datos muestrales es un aspecto crítico de los algoritmos de AA en general y de los AE en particular, jugando un papel central en muchas situaciones prácticas. En efecto, dicha disponibilidad resulta clave en contextos de optimización con escasez de datos muestrales o cuando los datos son difíciles de obtener [@alzubaidiSurveyDeepLearning2023], pero también en contexto donde las diversas clases que conforman un conjunto de datos se encuentran desbalanceadas [@wongUnderstandingDataAugmentation2016, @blagusSMOTEHighdimensionalClassimbalanced2013]. La distribución inequitativa de datos entre clases es frecuente en sectores donde los eventos excepcionales son aquellos que despiertan mayor interés (e.g. sectores como salud, seguridad, telecomunicaciones y finanzas, son algunos ejemplos[@fajardoOversamplingImbalancedData2021]). Todo esto ha impulsado la búsqueda de estrategias de **aumentación** de datos que permitan a los algoritmos trabajar de manera intensiva con la información disponible. Entre esas estrategias el uso de Autoencoders Variacionales (en adelante AV) ocupa un lugar prominente.
 
-Entre esas estrategias la aumentación de datos mediante Autoencoders Variacionales (en adelante AV) ocupa un lugar prominente por sus propiedades y resultados. Estos modelos generativos son capaces de aprender una representación latente de los datos de entrada y generar nuevos datos que mantienen las mismas características fundamentales (i.e.similar distribución conjunta de probabilidad) que los datos originales. La posibilidad de expandir el conjunto de datos de esta manera, abre una alternativa para mejorar la robustez de los AE, permitiendo una exploración efectiva del espacio de soluciones y mitigando los riesgos de sobreajuste y convergencia prematura. De este modo, la combinación de AE con técnicas de aumentación de datos a partir de AV ofrece un enfoque prometedor para abordar problemas de optimización en escenarios de alta dimensionalidad y muestras escasas.
+Los AV constituyen modelos generativos capaces de aprender una representación latente de los datos de entrada y generar nuevos datos que mantienen las mismas características fundamentales (i.e. similar distribución conjunta de probabilidad) que los datos originales [@kingmaIntroductionVariationalAutoencoders2019]. La posibilidad de expandir el conjunto de datos de esta manera, abre una alternativa para mejorar la robustez de los AE, permitiendo una exploración efectiva del espacio de soluciones y mitigar los riesgos de sobreajuste y convergencia prematura. De ese modo, la combinación de AE con técnicas de aumentación de datos a partir de AV ofrece un enfoque prometedor para abordar problemas de optimización en escenarios de alta dimensionalidad y muestras escasas.
+
+A la fecha de publicación de la presente No tenemos conocimiento de experiencia publicada de aplicación general de AV a AE en el ámbito científico nacional e internacional. Por eso nuestro aporte científico en este caso será ofrecer información y
 
 ## Estado del arte
+
+Fuera del ámbito de los AE
+
+En el contexto del AE
+
+-   [@martinsVariationalAutoencodersEvolutionary2022]
+
+-   
 
 ## Definición del problema
 
