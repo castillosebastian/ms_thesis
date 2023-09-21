@@ -50,6 +50,7 @@ coverage.xml
 *.log
 *.odt
 *.pdf
+*.docx
 
 # Sphinx documentation
 docs/_build/
