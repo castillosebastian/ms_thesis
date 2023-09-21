@@ -1,0 +1,5 @@
+El objetivo de aprendizaje del VAE se da entonces por la siguiente función:
+
+LearningVAE(𝑥; 𝜃, 𝜙) = max (𝜙,𝜃) ( E𝑧∼𝑞𝜙(𝑧|𝑥) [log 𝑝𝜃 (𝑥|𝑧)] − KL(𝑞𝜙(𝑧|𝑥) ∥ 𝑝𝜃 (𝑧)) )
+
+donde KL(𝑞(⋅) ∥ 𝑝(⋅)) denota la divergencia de Kullback–Liebler entre dos distribuciones 𝑞(⋅) y 𝑝(⋅). Una vez que el AV está entrenado, una observación sintética, 𝑥′, se genera primero tomando 𝑧 ∼ 𝑝𝜃(𝑧) y posteriormente tomando 𝑥′ de la codificación probabilística entrenada 𝑝𝜃(𝑥|𝑧).
