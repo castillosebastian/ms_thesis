@@ -63,3 +63,6 @@ target/
 
 # Node modules
 node_modules/
+
+# NOTEBOOKS
+/notebooks

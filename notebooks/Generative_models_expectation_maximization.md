@@ -76,3 +76,171 @@ Where:
 $\mathbb{E}_q$ denotes the expectation with respect to the distribution $q$. The first term on the right-hand side measures how well the joint distribution $p(\mathbf{x}, \mathbf{z})$ is modeled by $q$. -The second term is the entropy of $q$, which acts as a regularizer. Maximizing the ELBO is equivalent to minimizing the KL divergence between the variational distribution $q$ and the true posterior $p(\mathbf{z} | \mathbf{x})$. Intuitively, by maximizing the ELBO, you're trying to find a balance between a distribution $q$ that closely matches the target distribution $p$ (as measured by the joint likelihood) and one that maintains uncertainty (as measured by its entropy).
 
 In SUMMARY, generative models offer a powerful approach to understanding and generating data. The challenges posed by the MLE in the presence of latent variables are effectively addressed by the EM algorithm, making it a cornerstone method in the training of many generative models.
+
+Absolutely! Let's delve into Variational Autoencoders (VAEs). I'll take a systematic approach to guide you through the concepts, and as instructed, I'll use the `$` for math symbols.
+
+# **Variational Autoencoders (VAEs)**
+
+Variational Autoencoders are a specific type of generative model that brings together ideas from deep learning and Bayesian inference. VAEs are especially known for their application in generating new, similar data to the input data (like images or texts) and for their ability to learn latent representations of data.
+
+
+### **1. Generative Models and Latent Variables**
+
+In generative modeling, our goal is to learn a model of the probability distribution from which a dataset is drawn. The model can then be used to generate new samples. A VAE makes a specific assumption that there exist some *latent variables* (or hidden variables) that when transformed give rise to the observed data.
+
+Let $x$ be the observed data and $z$ be the latent variables. The generative story can be seen as:
+
+1. Draw $z$ from a prior distribution, $p(z)$.
+2. Draw $x$ from a conditional distribution, $p(x|z)$.
+
+### **2. Problem of Direct Inference**
+
+As discussed previously, direct inference for the posterior distribution $p(z|x)$ (i.e., the probability of the latent variables given the observed data) can be computationally challenging, especially when dealing with high-dimensional data or complex models. This is because:
+
+$$ p(z|x) = \frac{p(x|z) p(z)}{p(x)} $$
+
+Here, $p(x)$ is the evidence (or marginal likelihood) which is calculated as:
+
+$$ p(x) = \int p(x|z) p(z) dz $$
+
+This integral is intractable for most interesting models.
+
+### **3. Variational Inference and ELBO**
+
+To sidestep the intractability of the posterior, VAEs employ *variational inference*. Instead of computing the posterior directly, we introduce a parametric approximate posterior distribution, $q_{\phi}(z|x)$, with its own parameters $\phi$. 
+
+The goal now shifts to making this approximation as close as possible to the true posterior. This is done by minimizing the *Kullback-Leibler divergence* between the approximate and true posterior. 
+
+The optimization objective, known as the **Evidence Lower BOund (ELBO)**, can be written as:
+
+$$ \text{ELBO}(\phi) = \mathbb{E}_{q_{\phi}(z|x)}[\log p(x|z)] - \text{KL}(q_{\phi}(z|x) || p(z)) $$
+
+Where KL represents the Kullback-Leibler divergence.
+
+### **4. Neural Networks and Autoencoding Structure**
+
+In VAEs, neural networks are employed to parameterize the complex functions. Specifically:
+
+1. **Encoder Network**: This maps the observed data, $x$, to the parameters of the approximate posterior, $q_{\phi}(z|x)$.
+2. **Decoder Network**: Given samples of $z$ drawn from $q_{\phi}(z|x)$, this maps back to the data space, outputting parameters for the data likelihood, $p_{\theta}(x|z)$.
+
+The "autoencoder" terminology comes from the encoder-decoder structure where the model is trained to reconstruct its input data.
+
+### **5. Training a VAE**
+
+The training process involves:
+
+1. **Forward pass**: Input data is passed through the encoder to obtain parameters of $q_{\phi}(z|x)$.
+2. **Sampling**: Latent variables $z$ are sampled from $q_{\phi}(z|x)$ using the *reparameterization trick* for backpropagation.
+3. **Reconstruction**: The sampled $z$ values are passed through the decoder to obtain the data likelihood parameters, $p_{\theta}(x|z)$.
+4. **Loss Computation**: Two terms are considered - reconstruction loss (how well the VAE reconstructs the data) and the KL divergence between $q_{\phi}(z|x)$ and $p(z)$.
+5. **Backpropagation and Optimization**: The model parameters $\phi$ and $\theta$ are updated to maximize the ELBO.
+
+By the end of the training, you'll have a model that can generate new samples resembling your input data by simply sampling from the latent space and decoding the samples.
+
+VAEs are a powerful tools, that stay in the intersection of deep learning and probabilistic modeling, and they have a plethora of applications, especially in unsupervised learning tasks.
+
+# Variational Encoders with Pytorch
+
+Let create a basic implementation of a Variational Autoencoder (VAE) using PyTorch. The VAE will be designed to work on simple image data, such as the MNIST dataset.
+
+```python
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import torch.optim as optim
+import torchvision
+from torchvision import datasets, transforms
+
+# Define the VAE architecture
+class VAE(nn.Module):
+    def __init__(self, input_dim, hidden_dim, latent_dim):
+        super(VAE, self).__init__()
+
+        # Encoder
+        self.fc1 = nn.Linear(input_dim, hidden_dim)
+        self.fc21 = nn.Linear(hidden_dim, latent_dim)  # mu
+        self.fc22 = nn.Linear(hidden_dim, latent_dim)  # logvar
+
+        # Decoder
+        self.fc3 = nn.Linear(latent_dim, hidden_dim)
+        self.fc4 = nn.Linear(hidden_dim, input_dim)
+
+        self.latent_dim = latent_dim   # Add this line
+
+    def encode(self, x):
+        h1 = F.relu(self.fc1(x))
+        return self.fc21(h1), self.fc22(h1)
+
+    def reparameterize(self, mu, logvar):
+        std = torch.exp(0.5*logvar)
+        eps = torch.randn_like(std)
+        return mu + eps*std
+
+    def decode(self, z):
+        h3 = F.relu(self.fc3(z))
+        return torch.sigmoid(self.fc4(h3))
+
+    def forward(self, x):
+        mu, logvar = self.encode(x.view(-1, 784))
+        z = self.reparameterize(mu, logvar)
+        return self.decode(z), mu, logvar
+
+
+# Loss function: Reconstruction + KL Divergence Losses summed over all elements and batch
+def loss_function(recon_x, x, mu, logvar):
+    BCE = F.binary_cross_entropy(recon_x, x.view(-1, 784), reduction='sum')
+
+    # KLD = -0.5 * sum(1 + log(sigma^2) - mu^2 - sigma^2)
+    KLD = -0.5 * torch.sum(1 + logvar - mu.pow(2) - logvar.exp())
+    return BCE + KLD
+
+def train(epoch):
+    model.train()
+    train_loss = 0
+    for batch_idx, (data, _) in enumerate(train_loader):
+        optimizer.zero_grad()
+        recon_batch, mu, logvar = model(data)
+        loss = loss_function(recon_batch, data, mu, logvar)
+        loss.backward()
+        train_loss += loss.item()
+        optimizer.step()
+        if batch_idx % 100 == 0:
+            print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(
+                epoch, batch_idx * len(data), len(train_loader.dataset),
+                100. * batch_idx / len(train_loader), loss.item() / len(data)))
+    print('====> Epoch: {} Average loss: {:.4f}'.format(epoch, train_loss / len(train_loader.dataset)))
+
+def test():
+    model.eval()
+    test_loss = 0
+    with torch.no_grad():
+        for i, (data, _) in enumerate(test_loader):
+            recon_batch, mu, logvar = model(data)
+            test_loss += loss_function(recon_batch, data, mu, logvar).item()
+            if i == 0:
+                n = min(data.size(0), 8)
+                comparison = torch.cat([data[:n], recon_batch.view(batch_size, 1, 28, 28)[:n]])
+                torchvision.utils.save_image(comparison.cpu(), 'reconstruction_' + str(epoch) + '.png', nrow=n)
+
+    test_loss /= len(test_loader.dataset)
+    print('====> Test set loss: {:.4f}'.format(test_loss))
+
+transform = transforms.Compose([transforms.ToTensor()])
+train_dataset = datasets.MNIST(root='./data', train=True, transform=transform, download=True)
+test_dataset = datasets.MNIST(root='./data', train=False, transform=transform, download=True)
+
+batch_size = 128
+train_loader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True)
+test_loader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=batch_size, shuffle=False)
+
+model = VAE(input_dim=784, hidden_dim=400, latent_dim=20)
+optimizer = optim.Adam(model.parameters(), lr=1e-3)
+
+# Run the training loop
+epochs = 10
+for epoch in range(1, epochs + 1):
+    train(epoch)
+    test()
+
+```
