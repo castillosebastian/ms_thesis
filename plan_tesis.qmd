@@ -138,6 +138,8 @@ Para la comparación de ambas implementaciones elegiremos como métricas UAR, F1
 
 ## Diagrama de Gantt para el Cronograma de Trabajo
 
+
+
 ## Condiciones para el desarrollo
 
 \[pendiente\]
