@@ -38,7 +38,7 @@ fig.subplots_adjust(left=0.3)  # Adjust the left margin
 for i, (activity, duration, num) in enumerate(zip(activities, durations, n)):
     end_week = start_week + duration - 1  # Calculate the ending week for the current activity
     ax.broken_barh([(start_week, duration)], ((len(activities) - i - 1) - 0.4, 0.8), facecolors='blue')
-    ax.text(start_week + duration/4, (len(activities) - i - 1), f"{start_week}-{end_week}", color="white", fontsize=10)
+    ax.text(end_week + 1, (len(activities) - i - 1), f"{start_week}-{end_week}", color="black", fontsize=10)
     start_week = end_week + 1  # Update the starting week for the next activity
 
 # Configure the axes and labels

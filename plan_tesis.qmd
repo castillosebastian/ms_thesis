@@ -138,11 +138,64 @@ Para la comparación de ambas implementaciones elegiremos como métricas UAR, F1
 
 ## Diagrama de Gantt para el Cronograma de Trabajo
 
-
+![Diagrama de Gantt para el Proyecto de Tesis de Maestría](data/gantt_tesis.png)
 
 ## Condiciones para el desarrollo
 
-\[pendiente\]
+Detallamos a continuación los requerimientos técnicos necesarios para la implementación del trabajo propuesto, utilizando algoritmos genéticos y autoencoders variacionales. Se detallan las librerías de Python que serán utilizadas para el desarrollo, así como los conjuntos de datos en los que se llevarán a cabo los experimentos. Además, se describen las arquitecturas computacionales que se explorarán en el estudio. 
+
+### Librerías de Python
+
+- `numpy`: Para manipulación de matrices y cálculos matemáticos.  
+  - Repositorio: [GitHub - numpy](https://github.com/numpy/numpy)
+
+- `pandas`: Para manejo de conjuntos de datos.  
+  - Repositorio: [GitHub - pandas](https://github.com/pandas-dev/pandas)
+
+- `scikit-learn`: Para algoritmos de aprendizaje automático y preprocesamiento de datos.  
+  - Repositorio: [GitHub - scikit-learn](https://github.com/scikit-learn/scikit-learn)
+
+- `lightgbm`: Para implementar el modelo de Bosques Aleatorios.  
+  - Repositorio: [GitHub - LightGBM](https://github.com/microsoft/LightGBM)
+
+- `DEAP`: Para implementar algoritmos genéticos.  
+  - Repositorio: [GitHub - DEAP](https://github.com/DEAP/deap)
+
+- `pytorch`: Para implementaciones adicionales que requieran esta librería de aprendizaje profundo.  
+  - Repositorio: [GitHub - PyTorch](https://github.com/pytorch/pytorch)
+
+- `MLflow`: Para el seguimiento y la gestión del ciclo de vida del modelo de aprendizaje automático.  
+  - Repositorio: [GitHub - MLflow](https://github.com/mlflow/mlflow)
+
+### Conjuntos de Datos
+
+1. **Madelon**
+    - Fuente: [UCI Repository](https://archive.ics.uci.edu/ml/datasets/Madelon)
+
+2. **Leukemia**
+    - Fuente: Artículo Golub et al., 1999. El conjunto de datos puede encontrarse en varios repositorios de investigación en biología computacional.
+
+3. **GCM**
+    - Fuente: Artículo Ramaswamy et al., 2001. Disponible en repositorios de biología computacional.
+
+4. **Gisette**
+    - Fuente: [UCI Repository](https://archive.ics.uci.edu/ml/datasets/Gisette)
+
+> **Nota**: Se plantea la posibilidad de introducir nuevos conjuntos de datos en función de los resultados obtenidos.
+
+### Arquitecturas
+
+1. **Configuración Clásica**
+    - Algoritmo Genético (`DEAP`)
+    - Modelo de Bosques Aleatorios (`lightgbm`) para función objetivo
+    - Sin aumentación de datos
+
+2. **Configuración Novedosa**
+    - Algoritmo Genético (`DEAP`)
+    - Autoencoders Variacionales (`pytorch`)
+    - Modelo de Bosques Aleatorios (`lightgbm`) para función objetivo
+    - Aumentación de datos en distintas etapas del algoritmo genético
+
 
 ```{=html}
 <!-- 
