@@ -11,7 +11,7 @@ bibliography: references.bib
 
 ## Directores: Dr. Matías Gerard y Dr. Leandro Vignolo (CONICET-UNL)
 
-### Título: "Aumentación de datos mediante autoencoders variacionales y su impacto en el desempeño de estrategias de selección de características basadas en algoritmos genéticos."
+### Título: "Aumentación de datos mediante autoencoders variacionales y su impacto en estrategias de selección de características basadas en algoritmos genéticos."
 
 ### **Alumno: Lic. Claudio Sebastián Castillo (UTN)**
 
@@ -31,11 +31,11 @@ La importancia de los AGs como herramientas de optimización, adquiere especial 
 
 [^3]: Por ejemplo, dos características con alto valor discriminatorio para resolver un problema de clasificación pueden ser redundantes debido a su correlación y exigir criterios inteligentes de inclusión-exclusión. A la inversa, características que individualmente consideradas pueden carecer de valor discriminatorio, debido a su complementariedad pueden ser esenciales para resolver un problema y por lo tanto exigir criterios complejos de evaluación y búsqueda.
 
-Estos desafíos son abordados por los AGs de manera conveniente y creativa.[^4] En el marco de este algoritmo cada individuo (muestra) representa una solución candidata, con un perfil genético particular determinado por un subconjunto de características. La búsqueda de las mejores soluciones comienza con la selección de una población inicial de individuos y un subconjunto de características generados aleatoriamente. Estos subconjuntos se evalúan utilizando una función de aptitud, y los individuos con mejor rendimiento (puntaje) son seleccionados para la reproducción. Este proceso continúa durante un cierto número de generaciones hasta que se cumple una condición de terminación [@goldbergdavide.GeneticAlgorithmsSearch1989].
+Estos desafíos son abordados por los AGs de manera conveniente y creativa.[^4] En el marco de este algoritmo cada individuo (muestra) representa una solución candidata, con un perfil genético particular determinado por un subconjunto de características. La búsqueda de las mejores soluciones comienza con la selección de una población inicial de individuos y un subconjunto de características generados aleatoriamente. Este subconjunto se evalúan utilizando una función de aptitud, y los individuos con mejor rendimiento (puntaje) son seleccionados para la reproducción. Este proceso continúa durante un cierto número de generaciones hasta que se cumple una condición de terminación [@goldbergdavide.GeneticAlgorithmsSearch1989].
 
 [^4]: Ciertamente, no son sus atributos aislados los que le dan esa posibilidad, sino la interacción de sus componentes.
 
-Este mecanismo simple constituye un eficaz método de selección en contextos de alta dimensionalidad. Esa eficacia se logra, precisamente, gracias a la capacidad para explorar el problema dividiéndolo en subespacios de características y, al mismo tiempo, explotar las regiones de mayor valor en cada subespacio [@goldbergdavide.GeneticAlgorithmsSearch1989].[^5] Dicho lo anterior, no es menos cierto que la capacidad de selección de los AGs depende de la evaluación de aptitud que orienta la búsqueda, y tal evaluación descansa -finalmente- en la disponibilidad de datos. En efecto, la existencia y número de individuos condiciona la función objetivo y por esa vía también al proceso de selección de características de los AGs. La disponibilidad de datos resulta así un factor clave. Este aspecto del algoritmo se presenta no solo cuando se utilizan modelos complejo de aprendizaje automático que demandan una cantidad creciente de muestras de entrenamiento [@alzubaidiSurveyDeepLearning2023], pero también cuando se trabaja sobre datos cuyas clases se encuentran desbalanceadas [@blagusSMOTEHighdimensionalClassimbalanced2013]. En ambos escenarios, la falta de información suficiente degrada la capacidad informativa de la función objetivo [@hastieElementStatisticalLearning2009], afectando gravemente el proceso de selección de características.
+Este mecanismo simple constituye un eficaz método de selección en contextos de alta dimensionalidad. Esa eficacia se logra, precisamente, gracias a la capacidad de explorar el problema dividiéndolo en subespacios de características y, al mismo tiempo, explotar las regiones de mayor valor en cada subespacio [@goldbergdavide.GeneticAlgorithmsSearch1989].[^5] Dicho lo anterior, no es menos cierto que la capacidad de selección de los AGs depende de la evaluación de aptitud que orienta la búsqueda, y tal evaluación descansa -finalmente- en la disponibilidad de datos. En efecto, la existencia y número de individuos condiciona la función objetivo y por esa vía también al proceso de selección de características de los AGs. La disponibilidad de datos resulta así un factor clave. Este aspecto del algoritmo se presenta no solo cuando se utilizan modelos complejo de aprendizaje automático que demandan una cantidad creciente de muestras de entrenamiento [@alzubaidiSurveyDeepLearning2023], sino también cuando se trabaja sobre datos cuyas clases se encuentran desbalanceadas [@blagusSMOTEHighdimensionalClassimbalanced2013]. En ambos escenarios, la falta de información suficiente degrada la capacidad informativa de la función objetivo [@hastieElementStatisticalLearning2009], afectando gravemente el proceso de selección de características.
 
 [^5]: Ambas funciones -exploración y explotación- permiten al algoritmo reconfigurar el espacio de búsqueda y poner a prueba sus complejas dependencias. Como vimos, el procedimiento es orientado por una función de aptitud que evalúa las distintas posibilidades combinatorias encontradas por el algoritmo y retroalimenta el proceso exploratorio. La dinámica completa tiene como resultado un procedimiento experimental de búsqueda y selección capaz de reconocer soluciones próximas al óptimo.
 
@@ -63,7 +63,7 @@ AV en general
 
 -   [@kwarciakDeepGenerativeNetworks2023]
 
--   [@leelarathnAGnhancingRepresentationLearning2023]
+-   [@leelarathnaEnhancingRepresentationLearning2023]
 
 -   [@aiGenerativeOversamplingImbalanced2023]
 
@@ -75,7 +75,7 @@ AV en el contexto del AG
 
 -   [@martinsVariationalAutoencodersEvolutionary2022]
 
--   [@wuEVAGEvolutionaryVariational2023]
+-   [@wuEVAEEvolutionaryVariational2023]
 
 GA y búsqueda local
 
@@ -150,10 +150,6 @@ Para nuestro trabajo utilizaremos dos configuraciones para nuestro AG: una *clá
 
 Para la comparación de ambas implementaciones elegiremos como métricas UAR, F1 y el coeficiente de correlación de Matthews (MCC), todos ellas en relación al tamaño final de características seleccionadas por cada modelo. Generalmente los AGs constituye modelos *multiobjetivo* donde no solo interesa optimizar una métrica particular vinculada a su eficacia -por ejemplo precisión en su clasificación de individuos- sino también interesa satisfacer requerimientos de eficiencia -como por ejemplo minimizar el conjunto de características con que opera el modelo- [@jiaoSurveyEvolutionaryMultiobjective2023]. Por esta razón nuestra evaluación tomará en cuenta ambas dimensiones en el desempeño de las soluciones propuestas.
 
-## Diagrama de Gantt para el Cronograma de Trabajo
-
-![Diagrama de Gantt para el Proyecto de Tesis de Maestría](data/gantt_tesis.png)
-
 ## Condiciones para el desarrollo
 
 En el aspecto técnico, el proyecto se dividirá en dos fases en cuanto a la infraestructura. La primera fase será la del desarrollo y depuración de código, que se llevará a cabo en una laptop personal. Este equipo cuenta con 12 GB de memoria RAM y un procesador Intel Core i7 de 4 núcleos, lo cual es suficiente para programar, probar algoritmos y analizar datos a pequeña escala. Sin embargo, debido a la complejidad y el volumen de los datos que se manejarán, esta configuración local podría resultar insuficiente para los experimentos a gran escala. Por lo tanto, la segunda fase de experimentación se realizará en la nube, utilizando Google Cloud Compute (GCC). Estas máquinas en la nube nos permitirá configurar recursos en torno a 30 GB de memoria RAM y 12 núcleos de CPU, posibilitando así manejar grandes volúmenes de datos y realizar cálculos complejos de manera más eficiente. Este enfoque dual asegura un desarrollo ágil a la vez que permite experimentos computacionalmente intensivos.
@@ -201,6 +197,10 @@ Respecto a software el proyecto empleará Python 3.9. A continuación se detalla
     -   Autoencoders Variacionales (`pytorch`)
     -   Modelo de Bosques Aleatorios (`lightgbm`) para función objetivo
     -   Aumentación de datos en distintas etapas del algoritmo genético
+
+## Diagrama de Gantt para el Cronograma de Trabajo
+
+![Diagrama de Gantt para el Proyecto de Tesis de Maestría](data/gantt_tesis.png)
 
 ```{=html}
 <!-- 
