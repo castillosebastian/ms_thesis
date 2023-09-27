@@ -36,7 +36,6 @@
   urldate = {2023-09-15},
   abstract = {Learning with imbalanced data is a challenging problem in deep learning. Over-sampling is a widely used technique to re-balance the sampling distribution of training data. However, most existing over-sampling methods only use intra-class information of minority classes to augment the data but ignore the inter-class relationships with the majority ones, which is prone to overfitting, especially when the imbalance ratio is large. To address this issue, we propose a novel over-sampling model, called Majority-Guided VAE\textasciitilde (MGVAE), which generates new minority samples under the guidance of a majority-based prior. In this way, the newly generated minority samples can inherit the diversity and richness of the majority ones, thus mitigating overfitting in downstream tasks. Furthermore, to prevent model collapse under limited data, we first pre-train MGVAE on sufficient majority samples and then fine-tune based on minority samples with Elastic Weight Consolidation(EWC) regularization. Experimental results on benchmark image datasets and real-world tabular data show that MGVAE achieves competitive improvements over other over-sampling methods in downstream classification tasks, demonstrating the effectiveness of our method.},
   pubstate = {preprint},
-  keywords = {Computer Science - Machine Learning},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/8TLIU8VC/Ai et al. - 2023 - Generative Oversampling for Imbalanced Data via Ma.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/SABVVB5M/2302.html}
 }
 
@@ -68,7 +67,7 @@
   urldate = {2022-11-19},
   abstract = {We take a practical approach to solving sequence labeling problem assuming unavailability of domain expertise and scarcity of informational and computational resources. To this end, we utilize a universal end-to-end Bi-LSTM-based neural sequence labeling model applicable to a wide range of NLP tasks and languages. The model combines morphological, semantic, and structural cues extracted from data to arrive at informed predictions. The model's performance is evaluated on eight benchmark datasets (covering three tasks: POS-tagging, NER, and Chunking, and four languages: English, German, Dutch, and Spanish). We observe state-of-the-art results on four of them: CoNLL-2012 (English NER), CoNLL-2002 (Dutch NER), GermEval 2014 (German NER), Tiger Corpus (German POS-tagging), and competitive performance on the rest.},
   pubstate = {preprint},
-  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  keywords = {Computer Science - Computation and Language},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/R4T8YURY/Akhundov et al. - 2018 - Sequence Labeling A Practical Approach.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/ZIUAM2QV/1808.html}
 }
 
@@ -274,7 +273,7 @@
   url = {http://arxiv.org/abs/2202.02163},
   urldate = {2023-09-12},
   abstract = {Constrained optimization problems can be difficult because their search spaces have properties not conducive to search, e.g., multimodality, discontinuities, or deception. To address such difficulties, considerable research has been performed on creating novel evolutionary algorithms or specialized genetic operators. However, if the representation that defined the search space could be altered such that it only permitted valid solutions that satisfied the constraints, the task of finding the optimal would be made more feasible without any need for specialized optimization algorithms. We propose Constrained Optimization in Latent Space (COIL), which uses a VAE to generate a learned latent representation from a dataset comprising samples from the valid region of the search space according to a constraint, thus enabling the optimizer to find the objective in the new space defined by the learned representation. Preliminary experiments show promise: compared to an identical GA using a standard representation that cannot meet the constraints or find fit solutions, COIL with its learned latent representation can perfectly satisfy different types of constraints while finding high-fitness solutions.},
-  keywords = {{68W50, 68T07},Computer Science - Machine Learning,Computer Science - Neural and Evolutionary Computing,G.1.6,I.2.6},
+  keywords = {G.1.6,I.2.6},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/EAKCGQCE/Bentley et al. - 2022 - COIL Constrained Optimization in Learned Latent S.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/HY6FNWPG/2202.html}
 }
 
@@ -386,8 +385,24 @@
   urldate = {2023-09-12},
   abstract = {Recent research has demonstrated the vulnerability of fingerprint recognition systems to dictionary attacks based on MasterPrints. MasterPrints are real or synthetic fingerprints that can fortuitously match with a large number of fingerprints thereby undermining the security afforded by fingerprint systems. Previous work by Roy et al. generated synthetic MasterPrints at the feature-level. In this work we generate complete image-level MasterPrints known as DeepMasterPrints, whose attack accuracy is found to be much superior than that of previous methods. The proposed method, referred to as Latent Variable Evolution, is based on training a Generative Adversarial Network on a set of real fingerprint images. Stochastic search in the form of the Covariance Matrix Adaptation Evolution Strategy is then used to search for latent input variables to the generator network that can maximize the number of impostor matches as assessed by a fingerprint recognizer. Experiments convey the efficacy of the proposed method in generating DeepMasterPrints. The underlying method is likely to have broad applications in fingerprint security as well as fingerprint synthesis.},
   pubstate = {preprint},
-  keywords = {Computer Science - Computer Vision and Pattern Recognition,Computer Science - Cryptography and Security,Computer Science - Machine Learning},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/3KBD59K8/Bontrager et al. - 2018 - DeepMasterPrints Generating MasterPrints for Dict.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/Q4V9FIY9/1705.html}
+}
+
+@inproceedings{boserTrainingAlgorithmOptimal1992,
+  title = {A Training Algorithm for Optimal Margin Classifiers},
+  booktitle = {Proceedings of the Fifth Annual Workshop on {{Computational}} Learning Theory},
+  author = {Boser, Bernhard E. and Guyon, Isabelle M. and Vapnik, Vladimir N.},
+  date = {1992-07-01},
+  series = {{{COLT}} '92},
+  pages = {144--152},
+  publisher = {{Association for Computing Machinery}},
+  location = {{New York, NY, USA}},
+  doi = {10.1145/130385.130401},
+  url = {https://dl.acm.org/doi/10.1145/130385.130401},
+  urldate = {2023-09-27},
+  abstract = {A training algorithm that maximizes the margin between the training patterns and the decision boundary is presented. The technique is applicable to a wide variety of the classification functions, including Perceptrons, polynomials, and Radial Basis Functions. The effective number of parameters is adjusted automatically to match the complexity of the problem. The solution is expressed as a linear combination of supporting patterns. These are the subset of training patterns that are closest to the decision boundary. Bounds on the generalization performance based on the leave-one-out method and the VC-dimension are given. Experimental results on optical character recognition problems demonstrate the good generalization obtained when compared with other learning algorithms.},
+  isbn = {978-0-89791-497-0},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/J3E6BGUB/Boser et al. - 1992 - A training algorithm for optimal margin classifier.pdf}
 }
 
 @article{bourgonjeDomainspecificEntitySpotting,
@@ -396,6 +411,25 @@
   pages = {6},
   langid = {english},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/Z39ZBZ6J/Bourgonje et al. - Domain-speciﬁc Entity Spotting Curation Technolog.pdf}
+}
+
+@article{breimanRandomForests2001,
+  title = {Random {{Forests}}},
+  author = {Breiman, Leo},
+  date = {2001-10-01},
+  journaltitle = {Machine Learning},
+  shortjournal = {Machine Learning},
+  volume = {45},
+  number = {1},
+  pages = {5--32},
+  issn = {1573-0565},
+  doi = {10.1023/A:1010933404324},
+  url = {https://doi.org/10.1023/A:1010933404324},
+  urldate = {2023-09-27},
+  abstract = {Random forests are a combination of tree predictors such that each tree depends on the values of a random vector sampled independently and with the same distribution for all trees in the forest. The generalization error for forests converges a.s. to a limit as the number of trees in the forest becomes large. The generalization error of a forest of tree classifiers depends on the strength of the individual trees in the forest and the correlation between them. Using a random selection of features to split each node yields error rates that compare favorably to Adaboost (Y. Freund \& R. Schapire, Machine Learning: Proceedings of the Thirteenth International conference, ***, 148–156), but are more robust with respect to noise. Internal estimates monitor error, strength, and correlation and these are used to show the response to increasing the number of features used in the splitting. Internal estimates are also used to measure variable importance. These ideas are also applicable to regression.},
+  langid = {english},
+  keywords = {classification,ensemble,regression},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/RD9MWSCM/Breiman - 2001 - Random Forests.pdf}
 }
 
 @incollection{bringsjordArtificialIntelligence2022,
@@ -425,7 +459,7 @@
   urldate = {2023-05-17},
   abstract = {Artificial intelligence (AI) researchers have been developing and refining large language models (LLMs) that exhibit remarkable capabilities across a variety of domains and tasks, challenging our understanding of learning and cognition. The latest model developed by OpenAI, GPT-4, was trained using an unprecedented scale of compute and data. In this paper, we report on our investigation of an early version of GPT-4, when it was still in active development by OpenAI. We contend that (this early version of) GPT-4 is part of a new cohort of LLMs (along with ChatGPT and Google's PaLM for example) that exhibit more general intelligence than previous AI models. We discuss the rising capabilities and implications of these models. We demonstrate that, beyond its mastery of language, GPT-4 can solve novel and difficult tasks that span mathematics, coding, vision, medicine, law, psychology and more, without needing any special prompting. Moreover, in all of these tasks, GPT-4's performance is strikingly close to human-level performance, and often vastly surpasses prior models such as ChatGPT. Given the breadth and depth of GPT-4's capabilities, we believe that it could reasonably be viewed as an early (yet still incomplete) version of an artificial general intelligence (AGI) system. In our exploration of GPT-4, we put special emphasis on discovering its limitations, and we discuss the challenges ahead for advancing towards deeper and more comprehensive versions of AGI, including the possible need for pursuing a new paradigm that moves beyond next-word prediction. We conclude with reflections on societal influences of the recent technological leap and future research directions.},
   pubstate = {preprint},
-  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
+  keywords = {Computer Science - Computation and Language},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/I57CTQAU/Bubeck et al. - 2023 - Sparks of Artificial General Intelligence Early e.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/SUQWAWJR/2303.html}
 }
 
@@ -551,7 +585,6 @@
   urldate = {2023-05-30},
   abstract = {Contributions: The Chinese University of Hong Kong (CUHK)-Jockey Club AI for the Future Project (AI4Future) co-created an AI curriculum for pre-tertiary education and evaluated its efficacy. While AI is conventionally taught in tertiary level education, our co-creation process successfully developed the curriculum that has been used in secondary school teaching in Hong Kong and received positive feedback. Background: AI4Future is a cross-sector project that engages five major partners - CUHK Faculty of Engineering and Faculty of Education, Hong Kong secondary schools, the government and the AI industry. A team of 14 professors with expertise in engineering and education collaborated with 17 principals and teachers from 6 secondary schools to co-create the curriculum. This team formation bridges the gap between researchers in engineering and education, together with practitioners in education context. Research Questions: What are the main features of the curriculum content developed through the co-creation process? Would the curriculum significantly improve the students perceived competence in, as well as attitude and motivation towards AI? What are the teachers perceptions of the co-creation process that aims to accommodate and foster teacher autonomy? Methodology: This study adopted a mix of quantitative and qualitative methods and involved 335 student participants. Findings: 1) two main features of learning resources, 2) the students perceived greater competence, and developed more positive attitude to learn AI, and 3) the co-creation process generated a variety of resources which enhanced the teachers knowledge in AI, as well as fostered teachers autonomy in bringing the subject matter into their classrooms.},
   pubstate = {preprint},
-  keywords = {Computer Science - Artificial Intelligence},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/7UTBXUD4/Chiu et al. - 2021 - Creation and Evaluation of a Pre-tertiary Artifici.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/MKPKQ9ZC/2101.html}
 }
 
@@ -588,8 +621,7 @@
   url = {http://arxiv.org/abs/2304.12432},
   urldate = {2023-06-27},
   abstract = {There is a recent surge in interest for imitation learning, with large human video-game and robotic manipulation datasets being used to train agents on very complex tasks. While deep neuroevolution has recently been shown to match the performance of gradient-based techniques on various reinforcement learning problems, the application of deep neuroevolution techniques to imitation learning remains relatively unexplored. In this work, we propose to explore whether deep neuroevolution can be used for behaviour imitation on popular simulation environments. We introduce a simple co-evolutionary adversarial generation framework, and evaluate its capabilities by evolving standard deep recurrent networks to imitate state-of-the-art pre-trained agents on 8 OpenAI Gym state-based control tasks. Across all tasks, we find the final elite actor agents capable of achieving scores as high as those obtained by the pre-trained agents, all the while closely following their score trajectories. Our results suggest that neuroevolution could be a valuable addition to deep learning techniques to produce accurate emulation of behavioural agents. We believe that the generality and simplicity of our approach opens avenues for imitating increasingly complex behaviours in increasingly complex settings, e.g. human behaviour in real-world settings. We provide our source code, model checkpoints and results at github.com/MaximilienLC/gane.},
-  pubstate = {preprint},
-  keywords = {Computer Science - Machine Learning,Computer Science - Neural and Evolutionary Computing}
+  pubstate = {preprint}
 }
 
 @article{collobertNaturalLanguageProcessing,
@@ -614,7 +646,7 @@
   urldate = {2022-11-21},
   abstract = {We propose a unified neural network architecture and learning algorithm that can be applied to various natural language processing tasks including: part-of-speech tagging, chunking, named entity recognition, and semantic role labeling. This versatility is achieved by trying to avoid task-specific engineering and therefore disregarding a lot of prior knowledge. Instead of exploiting man-made input features carefully optimized for each task, our system learns internal representations on the basis of vast amounts of mostly unlabeled training data. This work is then used as a basis for building a freely available tagging system with good performance and minimal computational requirements.},
   pubstate = {preprint},
-  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  keywords = {Computer Science - Computation and Language},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/DZSI4XEU/Collobert et al. - 2011 - Natural Language Processing (almost) from Scratch.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/WG5YHQQH/1103.html}
 }
 
@@ -645,6 +677,23 @@
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/T46JHDEV/Dash y Liu - 1997 - Feature Selection for Classiﬁcation.pdf}
 }
 
+@article{debTaxonomyMetamodelingFrameworks2019,
+  title = {A {{Taxonomy}} for {{Metamodeling Frameworks}} for {{Evolutionary Multiobjective Optimization}}},
+  author = {Deb, Kalyanmoy and Hussein, Rayan and Roy, Proteek Chandan and Toscano-Pulido, Gregorio},
+  date = {2019-02},
+  journaltitle = {IEEE Transactions on Evolutionary Computation},
+  volume = {23},
+  number = {1},
+  pages = {104--116},
+  issn = {1941-0026},
+  doi = {10.1109/TEVC.2018.2828091},
+  url = {https://ieeexplore.ieee.org/document/8340780},
+  urldate = {2023-09-27},
+  abstract = {One of the main difficulties in applying an optimization algorithm to a practical problem is that evaluation of objectives and constraints often involve computationally expensive procedures. To handle such problems, a metamodel is first formed from a few exact (high-fidelity) solution evaluations and then optimized by an algorithm in a progressive manner. However, in solving multiobjective or many-objective optimization problems involving multiple constraints, a simple extension of the idea to form one metamodel for each objective and constraint function may not constitute the most efficient approach. The cumulative effect of errors from each metamodel may turn out to be detrimental for the accuracy of the overall optimization procedure. In this paper, we propose a taxonomy of different plausible metamodeling frameworks for multiobjective and many-objective optimization and provide a comparative study by discussing advantages and disadvantages of each framework. The results presented in this paper are obtained using the well-known Kriging metamodeling approach. Based on our extensive simulation studies on proposed frameworks, we report intriguing observations about the behavior of each framework, which may provide salient guidelines for further studies in this emerging area within evolutionary multiobjective optimization.},
+  eventtitle = {{{IEEE Transactions}} on {{Evolutionary Computation}}},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/X3NLLA3X/8340780.html}
+}
+
 @inproceedings{deshpandeAdvancedGeneticOperators2008,
   title = {Advanced Genetic Operators and Techniques: An Analysis of Dominance \& Diploidy, Reordering Operator in Genetic Search},
   shorttitle = {Advanced Genetic Operators and Techniques},
@@ -672,7 +721,7 @@
   abstract = {In just three years, Variational Autoencoders (VAEs) have emerged as one of the most popular approaches to unsupervised learning of complicated distributions. VAEs are appealing because they are built on top of standard function approximators (neural networks), and can be trained with stochastic gradient descent. VAEs have already shown promise in generating many kinds of complicated data, including handwritten digits [1, 2], faces [1, 3, 4], house numbers [5, 6], CIFAR images [6], physical models of scenes [4], segmentation [7], and predicting the future from static images [8]. This tutorial introduces the intuitions behind VAEs, explains the mathematics behind them, and describes some empirical behavior. No prior knowledge of variational Bayesian methods is assumed.},
   langid = {english},
   pubstate = {preprint},
-  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
+  keywords = {Statistics - Machine Learning},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/ZMU2KUFY/Doersch - 2021 - Tutorial on Variational Autoencoders.pdf}
 }
 
@@ -725,7 +774,7 @@
   urldate = {2023-05-30},
   abstract = {Deep metric learning (DML) enables learning with less supervision through its emphasis on the similarity structure of representations. There has been much work on improving generalization of DML in settings like zero-shot retrieval, but little is known about its implications for fairness. In this paper, we are the first to evaluate state-of-the-art DML methods trained on imbalanced data, and to show the negative impact these representations have on minority subgroup performance when used for downstream tasks. In this work, we first define fairness in DML through an analysis of three properties of the representation space -- inter-class alignment, intra-class alignment, and uniformity -- and propose finDML, the fairness in non-balanced DML benchmark to characterize representation fairness. Utilizing finDML, we find bias in DML representations to propagate to common downstream classification tasks. Surprisingly, this bias is propagated even when training data in the downstream task is re-balanced. To address this problem, we present Partial Attribute De-correlation (PARADE) to de-correlate feature representations from sensitive attributes and reduce performance gaps between subgroups in both embedding space and downstream metrics.},
   pubstate = {preprint},
-  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computers and Society,Computer Science - Machine Learning,Statistics - Machine Learning},
+  keywords = {Computer Science - Computers and Society,Statistics - Machine Learning},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/JH9B5M2Y/Dullerud et al. - 2022 - Is Fairness Only Metric Deep Evaluating and Addre.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/NRVCW8G5/2203.html}
 }
 
@@ -790,6 +839,28 @@
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/F7VFW2XI/El-Hasnony et al. - 2020 - Improved Feature Selection Model for Big Data Anal.pdf}
 }
 
+@online{ELBOWhatWhy2021,
+  title = {{{ELBO}} — {{What}} \& {{Why}}},
+  date = {2021-01-11T00:00:00+00:00},
+  url = {https://yunfanj.com/blog/2021/01/11/ELBO.html},
+  urldate = {2023-09-24},
+  abstract = {ELBO (evidence lower bound) is a key concept in Variational Bayesian Methods. It transforms inference problems, which are always intractable, into optimization problems that can be solved with, for example, gradient-based methods.},
+  langid = {english},
+  organization = {{Yunfan’s Blog}},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/9XFWU3P3/ELBO.html}
+}
+
+@online{ELBOWhatWhy2021a,
+  title = {{{ELBO}} — {{What}} \& {{Why}}},
+  date = {2021-01-11T00:00:00+00:00},
+  url = {https://yunfanj.com/blog/2021/01/11/ELBO.html},
+  urldate = {2023-09-25},
+  abstract = {ELBO (evidence lower bound) is a key concept in Variational Bayesian Methods. It transforms inference problems, which are always intractable, into optimization problems that can be solved with, for example, gradient-based methods.},
+  langid = {english},
+  organization = {{Yunfan’s Blog}},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/VUYWPMAN/ELBO.html}
+}
+
 @article{eltonApplyingDeutschConcept2021,
   title = {Applying {{Deutsch}}'s Concept of Good Explanations to Artificial Intelligence and Neuroscience -- an Initial Exploration},
   author = {Elton, Daniel C.},
@@ -806,7 +877,7 @@
   url = {http://arxiv.org/abs/2012.09318},
   urldate = {2023-05-29},
   abstract = {Artificial intelligence has made great strides since the deep learning revolution, but AI systems still struggle to extrapolate outside of their training data and adapt to new situations. For inspiration we look to the domain of science, where scientists have been able to develop theories which show remarkable ability to extrapolate and sometimes predict the existence of phenomena which have never been observed before. According to David Deutsch, this type of extrapolation, which he calls "reach", is due to scientific theories being hard to vary. In this work we investigate Deutsch's hard-to-vary principle and how it relates to more formalized principles in deep learning such as the bias-variance trade-off and Occam's razor. We distinguish internal variability, how much a model/theory can be varied internally while still yielding the same predictions, with external variability, which is how much a model must be varied to accurately predict new, out-of-distribution data. We discuss how to measure internal variability using the size of the Rashomon set and how to measure external variability using Kolmogorov complexity. We explore what role hard-to-vary explanations play in intelligence by looking at the human brain and distinguish two learning systems in the brain. The first system operates similar to deep learning and likely underlies most of perception and motor control while the second is a more creative system capable of generating hard-to-vary explanations of the world. We argue that figuring out how replicate this second system, which is capable of generating hard-to-vary explanations, is a key challenge which needs to be solved in order to realize artificial general intelligence. We make contact with the framework of Popperian epistemology which rejects induction and asserts that knowledge generation is an evolutionary process which proceeds through conjecture and refutation.},
-  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Computer Science - Neural and Evolutionary Computing,I.2.0},
+  keywords = {I.2.0},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/D3UJIWXN/Elton - 2021 - Applying Deutsch's concept of good explanations to.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/ZE27JUY2/2012.html}
 }
 
@@ -950,8 +1021,19 @@
   urldate = {2022-12-05},
   abstract = {In this paper, we propose a new approach to learned optimization. As common in the literature, we represent the computation of the update step of the optimizer with a neural network. The parameters of the optimizer are then learned on a set of training optimization tasks, in order to perform minimisation efficiently. Our main innovation is to propose a new neural network architecture for the learned optimizer inspired by the classic BFGS algorithm. As in BFGS, we estimate a preconditioning matrix as a sum of rank-one updates but use a transformer-based neural network to predict these updates jointly with the step length and direction. In contrast to several recent learned optimization approaches, our formulation allows for conditioning across different dimensions of the parameter space of the target problem while remaining applicable to optimization tasks of variable dimensionality without retraining. We demonstrate the advantages of our approach on a benchmark composed of objective functions traditionally used for evaluation of optimization algorithms, as well as on the real world-task of physics-based reconstruction of articulated 3D human motion.},
   pubstate = {preprint},
-  keywords = {Computer Science - Computer Vision and Pattern Recognition},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/8YFXCK2X/Gärtner et al. - 2022 - Transformer-Based Learned Optimization.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/MHNMVHFK/2212.html}
+}
+
+@online{GeneticAlgorithmsFitness2023,
+  title = {Genetic {{Algorithms}}: {{Fitness Function}} for {{Feature Selection Algorithm}} | {{Saturn Cloud Blog}}},
+  shorttitle = {Genetic {{Algorithms}}},
+  date = {2023-07-18T00:00:00+00:00},
+  url = {https://saturncloud.io/blog/genetic-algorithms-fitness-function-for-feature-selection-algorithm/},
+  urldate = {2023-09-27},
+  abstract = {As data scientists and software engineers, we are constantly faced with the challenge of feature selection in machine learning models. Feature selection plays a crucial role in improving model performance and reducing computational complexity. One powerful approach to feature selection is using genetic algorithms, which mimic the process of natural selection to iteratively search for the best set of features.},
+  langid = {english},
+  keywords = {ea\_fitness\_function},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/WMNIV6KD/genetic-algorithms-fitness-function-for-feature-selection-algorithm.html}
 }
 
 @article{girinDynamicalVariationalAutoencoders2021,
@@ -973,7 +1055,7 @@
   urldate = {2023-08-27},
   abstract = {Variational autoencoders (VAEs) are powerful deep generative models widely used to represent high-dimensional complex data through a low-dimensional latent space learned in an unsupervised manner. In the original VAE model, the input data vectors are processed independently. Recently, a series of papers have presented different extensions of the VAE to process sequential data, which model not only the latent space but also the temporal dependencies within a sequence of data vectors and corresponding latent vectors, relying on recurrent neural networks or state-space models. In this paper, we perform a literature review of these models. We introduce and discuss a general class of models, called dynamical variational autoencoders (DVAEs), which encompasses a large subset of these temporal VAE extensions. Then, we present in detail seven recently proposed DVAE models, with an aim to homogenize the notations and presentation lines, as well as to relate these models with existing classical temporal models. We have reimplemented those seven DVAE models and present the results of an experimental benchmark conducted on the speech analysis-resynthesis task (the PyTorch code is made publicly available). The paper concludes with a discussion on important issues concerning the DVAE class of models and future research guidelines.},
   langid = {english},
-  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
+  keywords = {Statistics - Machine Learning},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/KHNB52KZ/Girin et al. - 2021 - Dynamical Variational Autoencoders A Comprehensiv.pdf}
 }
 
@@ -1122,7 +1204,7 @@
   urldate = {2022-11-04},
   abstract = {There are many Language Models for the English language according to its worldwide relevance. However, for the Spanish language, even if it is a widely spoken language, there are very few Spanish Language Models which result to be small and too general. Legal slang could be think of a Spanish variant on its own as it is very complicated in vocabulary, semantics and phrase understanding. For this work we gathered legal-domain corpora from different sources, generated a model and evaluated against Spanish general domain tasks. The model provides reasonable results in those tasks.},
   pubstate = {preprint},
-  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
+  keywords = {Computer Science - Computation and Language},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/6D2GQ87K/Gutiérrez-Fandiño et al. - 2021 - Spanish Legalese Language Model and Corpora.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/77LUEA5K/2110.html}
 }
 
@@ -1147,7 +1229,6 @@
   url = {http://arxiv.org/abs/1804.07179},
   urldate = {2023-09-13},
   abstract = {When and why can evolutionary multi-objective optimization (EMO) algorithms cover the entire Pareto set? That is a major concern for EMO researchers and practitioners. A recent theoretical study revealed that (roughly speaking) if the Pareto set forms a topological simplex (a curved line, a curved triangle, a curved tetrahedron, etc.), then decomposition-based EMO algorithms can cover the entire Pareto set. Usually, we cannot know the true Pareto set and have to estimate its topology by using the population of EMO algorithms during or after the runtime. This paper presents a data-driven approach to analyze the topology of the Pareto set. We give a theory of how to recognize the topology of the Pareto set from data and implement an algorithm to judge whether the true Pareto set may form a topological simplex or not. Numerical experiments show that the proposed method correctly recognizes the topology of high-dimensional Pareto sets within reasonable population size.},
-  keywords = {Computer Science - Neural and Evolutionary Computing,Mathematics - Optimization and Control},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/JSX9WKV3/Hamada y Goto - 2018 - Data-Driven Analysis of Pareto Set Topology.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/XRRRA2V8/1804.html}
 }
 
@@ -1173,7 +1254,7 @@
   urldate = {2022-11-13},
   abstract = {Multilayered artificial neural networks are becoming a pervasive tool in a host of application fields. At the heart of this deep learning revolution are familiar concepts from applied and computational mathematics; notably, in calculus, approximation theory, optimization and linear algebra. This article provides a very brief introduction to the basic ideas that underlie deep learning from an applied mathematics perspective. Our target audience includes postgraduate and final year undergraduate students in mathematics who are keen to learn about the area. The article may also be useful for instructors in mathematics who wish to enliven their classes with references to the application of deep learning techniques. We focus on three fundamental questions: what is a deep neural network? how is a network trained? what is the stochastic gradient method? We illustrate the ideas with a short MATLAB code that sets up and trains a network. We also show the use of state-of-the art software on a large scale image classification problem. We finish with references to the current literature.},
   pubstate = {preprint},
-  keywords = {{97R40, 68T01, 65K10, 62M45},Computer Science - Machine Learning,G.1.6,I.2.0,I.2.10,I.2.6,Mathematics - History and Overview,Mathematics - Numerical Analysis,Statistics - Machine Learning},
+  keywords = {{97R40, 68T01, 65K10, 62M45},G.1.6,I.2.0,I.2.10,I.2.6,Mathematics - History and Overview,Mathematics - Numerical Analysis,Statistics - Machine Learning},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/CLQ74LQ6/Higham y Higham - 2018 - Deep Learning An Introduction for Applied Mathema.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/SXYPPAW5/1801.html}
 }
 
@@ -1189,7 +1270,7 @@
   urldate = {2022-11-09},
   abstract = {We investigate the optimal model size and number of tokens for training a transformer language model under a given compute budget. We find that current large language models are significantly undertrained, a consequence of the recent focus on scaling language models whilst keeping the amount of training data constant. By training over \textbackslash nummodels language models ranging from 70 million to over 16 billion parameters on 5 to 500 billion tokens, we find that for compute-optimal training, the model size and the number of training tokens should be scaled equally: for every doubling of model size the number of training tokens should also be doubled. We test this hypothesis by training a predicted compute-optimal model, \textbackslash chinchilla, that uses the same compute budget as \textbackslash gopher but with 70B parameters and 4\$\textbackslash times\$ more more data. \textbackslash chinchilla uniformly and significantly outperforms \textbackslash Gopher (280B), GPT-3 (175B), Jurassic-1 (178B), and Megatron-Turing NLG (530B) on a large range of downstream evaluation tasks. This also means that \textbackslash chinchilla uses substantially less compute for fine-tuning and inference, greatly facilitating downstream usage. As a highlight, \textbackslash chinchilla reaches a state-of-the-art average accuracy of 67.5\textbackslash\% on the MMLU benchmark, greater than a 7\textbackslash\% improvement over \textbackslash gopher.},
   pubstate = {preprint},
-  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  keywords = {Computer Science - Computation and Language},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/5MRXH433/Hoffmann et al. - 2022 - Training Compute-Optimal Large Language Models.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/JGVNISHL/2203.html}
 }
 
@@ -1235,7 +1316,7 @@
   urldate = {2023-07-23},
   abstract = {Generative models for open domain question answering have proven to be competitive, without resorting to external knowledge. While promising, this approach requires to use models with billions of parameters, which are expensive to train and query. In this paper, we investigate how much these models can benefit from retrieving text passages, potentially containing evidence. We obtain state-of-the-art results on the Natural Questions and TriviaQA open benchmarks. Interestingly, we observe that the performance of this method significantly improves when increasing the number of retrieved passages. This is evidence that generative models are good at aggregating and combining evidence from multiple passages.},
   pubstate = {preprint},
-  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  keywords = {Computer Science - Computation and Language},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/FDY847GQ/Izacard y Grave - 2021 - Leveraging Passage Retrieval with Generative Model.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/ACRN37GA/2007.html}
 }
 
@@ -1271,6 +1352,16 @@
   abstract = {Maximizing the classification accuracy and minimizing the number of selected features are two primary objectives in feature selection, which is inherently a multiobjective task. Multiobjective feature selection enables us to gain various insights from complex data in addition to dimensionality reduction and improved accuracy, which has attracted increasing attention from researchers and practitioners. Over the past two decades, significant advancements in multiobjective feature selection in classification have been achieved in both the methodologies and applications, but have not been well summarized and discussed. To fill this gap, this paper presents a broad survey on existing research on multiobjective feature selection in classification, focusing on up-to-date approaches, applications, current challenges, and future directions. To be specific, we categorize multiobjective feature selection in classification on the basis of different criteria, and provide detailed descriptions of representative methods in each category. Additionally, we summarize a list of successful real-world applications of multiobjective feature selection from different domains, to exemplify their significant practical value and demonstrate their abilities in providing a set of tradeoff feature subsets to meet different requirements of decision makers. We also discuss key challenges and shed lights on emerging directions for future developments of multiobjective feature selection.},
   langid = {english},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/LJ5EEV9A/Jiao et al. - 2023 - A Survey on Evolutionary Multiobjective Feature Se.pdf}
+}
+
+@article{JournalScientificTechnical,
+  title = {Journal of {{Scientific}} and {{Technical Advancements}}},
+  volume = {1},
+  number = {3},
+  abstract = {Genetic algorithm is an optimization technique which is based on the process of natural selection that drives biological evolution. It repeatedly modifies a population of individual solution and chooses individuals randomly on the basis of fitness value from the current population to be parent and uses them to produce the offspring for the next population. The main components of genetic algorithm consists of fitness function, cross over, mutation etc. The design of fitness function is very essential in genetic algorithm as the desired output depends heavily on the design of fitness function. The fitness value of each individual is computed by applying the fitness function to it. A fitness function is an application specific objective function used to evaluate relative effectiveness of the potential solutions. For standard optimization algorithm, it is known as objective function. In this paper, some of the fitness functions, applied in different domains, have been selected and analyzed. It has been observed that formulation of specific fitness function is very significant and different classes of applications depend on different parameters for designing such functions. The study may further be enhanced to design specific and optimized fitness function for future research.},
+  langid = {english},
+  keywords = {ea\_fitness\_function},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/IY6ZH49R/Journal of Scientific and Technical Advancements.pdf}
 }
 
 @inproceedings{jovicReviewFeatureSelection2015,
@@ -1317,7 +1408,7 @@
   urldate = {2023-07-23},
   abstract = {Large Language Models (LLMs) went from non-existent to ubiquitous in the machine learning discourse within a few years. Due to the fast pace of the field, it is difficult to identify the remaining challenges and already fruitful application areas. In this paper, we aim to establish a systematic set of open problems and application successes so that ML researchers can comprehend the field's current state more quickly and become productive.},
   pubstate = {preprint},
-  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
+  keywords = {Computer Science - Computation and Language},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/7ZGZUD8T/Kaddour et al. - 2023 - Challenges and Applications of Large Language Mode.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/PHK8NT6Q/2307.html}
 }
 
@@ -1370,7 +1461,6 @@
   urldate = {2023-09-15},
   abstract = {We propose a new strategy to improve the accuracy and robustness of image classification. First, we train a baseline CNN model. Then, we identify challenging regions in the feature space by identifying all misclassified samples, and correctly classified samples with low confidence values. These samples are then used to train a Variational AutoEncoder (VAE). Next, the VAE is used to generate synthetic images. Finally, the generated synthetic images are used in conjunction with the original labeled images to train a new model in a semi-supervised fashion. Empirical results on benchmark datasets such as STL10 and CIFAR-100 show that the synthetically generated samples can further diversify the training data, leading to improvement in image classification in comparison with the fully supervised baseline approaches using only the available data.},
   pubstate = {preprint},
-  keywords = {Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/264MLE57/Khmaissia y Frigui - 2023 - Confidence-Guided Data Augmentation for Improved S.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/W67GEXUM/2209.html}
 }
 
@@ -1408,7 +1498,7 @@
   url = {http://arxiv.org/abs/1906.02691},
   urldate = {2023-08-28},
   abstract = {Variational autoencoders provide a principled framework for learning deep latent-variable models and corresponding inference models. In this work, we provide an introduction to variational autoencoders and some important extensions.},
-  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
+  keywords = {Statistics - Machine Learning},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/9YRAISJQ/Kingma y Welling - 2019 - An Introduction to Variational Autoencoders.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/L4G7KYP7/1906.html}
 }
 
@@ -1498,7 +1588,6 @@
   urldate = {2023-07-11},
   abstract = {The final goal of all industrial machine learning (ML) projects is to develop ML products and rapidly bring them into production. However, it is highly challenging to automate and operationalize ML products and thus many ML endeavors fail to deliver on their expectations. The paradigm of Machine Learning Operations (MLOps) addresses this issue. MLOps includes several aspects, such as best practices, sets of concepts, and development culture. However, MLOps is still a vague term and its consequences for researchers and professionals are ambiguous. To address this gap, we conduct mixed-method research, including a literature review, a tool review, and expert interviews. As a result of these investigations, we provide an aggregated overview of the necessary principles, components, and roles, as well as the associated architecture and workflows. Furthermore, we furnish a definition of MLOps and highlight open challenges in the field. Finally, this work provides guidance for ML researchers and practitioners who want to automate and operate their ML products with a designated set of technologies.},
   pubstate = {preprint},
-  keywords = {Computer Science - Machine Learning},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/5U9W7CLX/Kreuzberger et al. - 2022 - Machine Learning Operations (MLOps) Overview, Def.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/WEGQL26T/2205.html}
 }
 
@@ -1513,7 +1602,6 @@
   urldate = {2023-09-15},
   abstract = {The design of personalized cranial implants is a challenging and tremendous task that has become a hot topic in terms of process automation with the use of deep learning techniques. The main challenge is associated with the high diversity of possible cranial defects. The lack of appropriate data sources negatively influences the data-driven nature of deep learning algorithms. Hence, one of the possible solutions to overcome this problem is to rely on synthetic data. In this work, we propose three volumetric variations of deep generative models to augment the dataset by generating synthetic skulls, i.e. Wasserstein Generative Adversarial Network with Gradient Penalty (WGAN-GP), WGAN-GP hybrid with Variational Autoencoder pretraining (VAE/WGAN-GP) and Introspective Variational Autoencoder (IntroVAE). We show that it is possible to generate dozens of thousands of defective skulls with compatible defects that achieve a trade-off between defect heterogeneity and the realistic shape of the skull. We evaluate obtained synthetic data quantitatively by defect segmentation with the use of V-Net and qualitatively by their latent space exploration. We show that the synthetically generated skulls highly improve the segmentation process compared to using only the original unaugmented data. The generated skulls may improve the automatic design of personalized cranial implants for real medical cases.},
   pubstate = {preprint},
-  keywords = {Computer Science - Computer Vision and Pattern Recognition,Electrical Engineering and Systems Science - Image and Video Processing},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/AYXTG4PX/Kwarciak y Wodzinski - 2023 - Deep Generative Networks for Heterogeneous Augment.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/IBS5UTFE/2308.html}
 }
 
@@ -1586,7 +1674,6 @@
   urldate = {2023-09-15},
   abstract = {Variational Autoencoders and their many variants have displayed impressive ability to perform dimensionality reduction, often achieving state-of-the-art performance. Many current methods however, struggle to learn good representations in High Dimensional, Low Sample Size (HDLSS) tasks, which is an inherently challenging setting. We address this challenge by using an ensemble of lightweight VAEs to learn posteriors over subsets of the feature-space, which get aggregated into a joint posterior in a novel divide-and-conquer approach. Specifically, we present an alternative factorisation of the joint posterior that induces a form of implicit data augmentation that yields greater sample efficiency. Through a series of experiments on eight real-world datasets, we show that our method learns better latent representations in HDLSS settings, which leads to higher accuracy in a downstream classification task. Furthermore, we verify that our approach has a positive effect on disentanglement and achieves a lower estimated Total Correlation on learnt representations. Finally, we show that our approach is robust to partial features at inference, exhibiting little performance degradation even with most features missing.},
   pubstate = {preprint},
-  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/VT3T2BCI/Leelarathna et al. - 2023 - Enhancing Representation Learning on High-Dimensio.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/C5DJ3WUI/2306.html}
 }
 
@@ -1677,7 +1764,7 @@
   urldate = {2023-02-17},
   abstract = {Knowledge underpins reasoning. Recent research demonstrates that when relevant knowledge is provided as additional context to commonsense question answering (QA), it can substantially enhance the performance even on top of state-of-the-art. The fundamental challenge is where and how to find such knowledge that is high quality and on point with respect to the question; knowledge retrieved from knowledge bases are incomplete and knowledge generated from language models are inconsistent. We present Rainier, or Reinforced Knowledge Introspector, that learns to generate contextually relevant knowledge in response to given questions. Our approach starts by imitating knowledge generated by GPT-3, then learns to generate its own knowledge via reinforcement learning where rewards are shaped based on the increased performance on the resulting question answering. Rainier demonstrates substantial and consistent performance gains when tested over 9 different commonsense benchmarks: including 5 datasets that are seen during model training, as well as 4 datasets that are kept unseen. Our work is the first to report that knowledge generated by models that are orders of magnitude smaller than GPT-3, even without direct supervision on the knowledge itself, can exceed the quality of commonsense knowledge elicited from GPT-3.},
   pubstate = {preprint},
-  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
+  keywords = {Computer Science - Computation and Language},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/2D552HTJ/Liu et al. - 2022 - Rainier Reinforced Knowledge Introspector for Com.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/7UBB9E65/2210.html}
 }
 
@@ -1693,7 +1780,7 @@
   urldate = {2023-02-28},
   abstract = {We study the design decisions of publicly available instruction tuning methods, and break down the development of Flan 2022 (Chung et al., 2022). Through careful ablation studies on the Flan Collection of tasks and methods, we tease apart the effect of design decisions which enable Flan-T5 to outperform prior work by 3-17\%+ across evaluation settings. We find task balancing and enrichment techniques are overlooked but critical to effective instruction tuning, and in particular, training with mixed prompt settings (zero-shot, few-shot, and chain-of-thought) actually yields stronger (2\%+) performance in all settings. In further experiments, we show Flan-T5 requires less finetuning to converge higher and faster than T5 on single downstream tasks, motivating instruction-tuned models as more computationally-efficient starting checkpoints for new tasks. Finally, to accelerate research on instruction tuning, we make the Flan 2022 collection of datasets, templates, and methods publicly available at https://github.com/google-research/FLAN/tree/main/flan/v2.},
   pubstate = {preprint},
-  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
+  keywords = {Computer Science - Computation and Language},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/38WECT5S/Longpre et al. - 2023 - The Flan Collection Designing Data and Methods fo.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/PDJBKGX8/2301.html}
 }
 
@@ -1723,7 +1810,7 @@
   urldate = {2022-11-19},
   abstract = {State-of-the-art sequence labeling systems traditionally require large amounts of task-specific knowledge in the form of hand-crafted features and data pre-processing. In this paper, we introduce a novel neutral network architecture that benefits from both word- and character-level representations automatically, by using combination of bidirectional LSTM, CNN and CRF. Our system is truly end-to-end, requiring no feature engineering or data pre-processing, thus making it applicable to a wide range of sequence labeling tasks. We evaluate our system on two data sets for two sequence labeling tasks --- Penn Treebank WSJ corpus for part-of-speech (POS) tagging and CoNLL 2003 corpus for named entity recognition (NER). We obtain state-of-the-art performance on both the two data --- 97.55\textbackslash\% accuracy for POS tagging and 91.21\textbackslash\% F1 for NER.},
   pubstate = {preprint},
-  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning,Statistics - Machine Learning},
+  keywords = {Computer Science - Computation and Language,Statistics - Machine Learning},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/TJ3G864Z/Ma y Hovy - 2016 - End-to-end Sequence Labeling via Bi-directional LS.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/SQG83Z7L/1603.html}
 }
 
@@ -1740,8 +1827,36 @@
   urldate = {2023-02-01},
   abstract = {Today's large language models (LLMs) routinely generate coherent, grammatical and seemingly meaningful paragraphs of text. This achievement has led to speculation that these networks are -- or will soon become -- "thinking machines", capable of performing tasks that require abstract knowledge and reasoning. Here, we review the capabilities of LLMs by considering their performance on two different aspects of language use: 'formal linguistic competence', which includes knowledge of rules and patterns of a given language, and 'functional linguistic competence', a host of cognitive abilities required for language understanding and use in the real world. Drawing on evidence from cognitive neuroscience, we show that formal competence in humans relies on specialized language processing mechanisms, whereas functional competence recruits multiple extralinguistic capacities that comprise human thought, such as formal reasoning, world knowledge, situation modeling, and social cognition. In line with this distinction, LLMs show impressive (although imperfect) performance on tasks requiring formal linguistic competence, but fail on many tests requiring functional competence. Based on this evidence, we argue that (1) contemporary LLMs should be taken seriously as models of formal linguistic skills; (2) models that master real-life language use would need to incorporate or develop not only a core language module, but also multiple non-language-specific cognitive capacities required for modeling thought. Overall, a distinction between formal and functional linguistic competence helps clarify the discourse surrounding LLMs' potential and provides a path toward building models that understand and use language in human-like ways.},
   pubstate = {preprint},
-  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
+  keywords = {Computer Science - Computation and Language},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/JYQT2KL3/Mahowald et al. - 2023 - Dissociating language and thought in large languag.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/9XCXCXAU/2301.html}
+}
+
+@online{majidiCombinationMultiObjectiveGenetic2022,
+  title = {A {{Combination}} of {{Multi-Objective Genetic Algorithm}} and {{Deep Learning}} for {{Music Harmony Generation}}},
+  author = {Majidi, Maryam and Toroghi, Rahil Mahdian},
+  date = {2022-06-03},
+  eprint = {2102.07960},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  url = {http://arxiv.org/abs/2102.07960},
+  urldate = {2023-09-27},
+  abstract = {Automatic Music Generation (AMG) has become an interesting research topic for many scientists in artificial intelligence, who are also interested in the music industry. One of the main challenges in AMG is that there is no clear objective evaluation criterion that can measure the music grammar, structural rules, and audience satisfaction. Also, original music contains different elements that should work together, such as melody, harmony, and rhythm; but in the most of previous works, AMG works only for one element (e.g., melody). Therefore, in this paper, we propose a Multi-Objective Genetic Algorithm (MO-GA) to generate polyphonic music pieces, considering grammar and listener satisfaction. In this method, we use three objective functions. The first objective function is the accuracy of the generated music piece, based on music theory; and the other two objective functions are modeled scores provided by music experts and ordinary listeners. The scoring of experts and listeners separately are modeled using Bi-directional Long Short-Term Memory (Bi-LSTM) neural networks. The proposed music generation system tries to maximize mentioned objective functions to generate a new piece of music, including melody and harmony. The results show that the proposed method can generate pleasant pieces with desired styles and lengths, along with harmonic sounds that follow the grammar.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Artificial Intelligence},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/7TUZE2AB/Majidi y Toroghi - 2022 - A Combination of Multi-Objective Genetic Algorithm.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/N5N6S5XS/2102.html}
+}
+
+@online{mallawaarachchiHowDefineFitness2017,
+  title = {How to Define a {{Fitness Function}} in a {{Genetic Algorithm}}?},
+  author = {Mallawaarachchi, Vijini},
+  date = {2017-11-10T05:21:04},
+  url = {https://towardsdatascience.com/how-to-define-a-fitness-function-in-a-genetic-algorithm-be572b9ea3b4},
+  urldate = {2023-09-27},
+  abstract = {In my previous article, I have explained the basics about Genetic Algorithms. After it was published, I got many requests to discuss more…},
+  langid = {english},
+  organization = {{Medium}},
+  keywords = {ea\_fitness\_function},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/3ZS2VT7E/how-to-define-a-fitness-function-in-a-genetic-algorithm-be572b9ea3b4.html}
 }
 
 @inproceedings{martinsVariationalAutoencodersEvolutionary2022,
@@ -1797,7 +1912,6 @@
   urldate = {2023-05-31},
   abstract = {With the widespread use of AI systems and applications in our everyday lives, it is important to take fairness issues into consideration while designing and engineering these types of systems. Such systems can be used in many sensitive environments to make important and life-changing decisions; thus, it is crucial to ensure that the decisions do not reflect discriminatory behavior toward certain groups or populations. We have recently seen work in machine learning, natural language processing, and deep learning that addresses such challenges in different subdomains. With the commercialization of these systems, researchers are becoming aware of the biases that these applications can contain and have attempted to address them. In this survey we investigated different real-world applications that have shown biases in various ways, and we listed different sources of biases that can affect AI applications. We then created a taxonomy for fairness definitions that machine learning researchers have defined in order to avoid the existing bias in AI systems. In addition to that, we examined different domains and subdomains in AI showing what researchers have observed with regard to unfair outcomes in the state-of-the-art methods and how they have tried to address them. There are still many future directions and solutions that can be taken to mitigate the problem of bias in AI systems. We are hoping that this survey will motivate researchers to tackle these issues in the near future by observing existing work in their respective fields.},
   pubstate = {preprint},
-  keywords = {Computer Science - Machine Learning},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/FSKYNPR6/Mehrabi et al. - 2022 - A Survey on Bias and Fairness in Machine Learning.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/XPGDFWPZ/1908.html}
 }
 
@@ -1813,7 +1927,7 @@
   urldate = {2022-11-18},
   abstract = {While deep learning models have replaced hand-designed features across many domains, these models are still trained with hand-designed optimizers. In this work, we leverage the same scaling approach behind the success of deep learning to learn versatile optimizers. We train an optimizer for deep learning which is itself a small neural network that ingests gradients and outputs parameter updates. Meta-trained with approximately four thousand TPU-months of compute on a wide variety of optimization tasks, our optimizer not only exhibits compelling performance, but optimizes in interesting and unexpected ways. It requires no hyperparameter tuning, instead automatically adapting to the specifics of the problem being optimized. We open source our learned optimizer, meta-training code, the associated train and test data, and an extensive optimizer benchmark suite with baselines at velo-code.github.io.},
   pubstate = {preprint},
-  keywords = {Computer Science - Machine Learning,Mathematics - Optimization and Control,Statistics - Machine Learning},
+  keywords = {Statistics - Machine Learning},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/9JPZIBLR/Metz et al. - 2022 - VeLO Training Versatile Learned Optimizers by Sca.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/PV2L46AY/2211.html}
 }
 
@@ -2004,7 +2118,7 @@
   abstract = {Conditional variational autoencoders (CVAEs) are versatile deep generative models that extend the standard VAE framework by conditioning the generative model with auxiliary covariates. The original CVAE model assumes that the data samples are independent, whereas more recent conditional VAE models, such as the Gaussian process (GP) prior VAEs, can account for complex correlation structures across all data samples. While several methods have been proposed to learn standard VAEs from partially observed datasets, these methods fall short for conditional VAEs. In this work, we propose a method to learn conditional VAEs from datasets in which auxiliary covariates can contain missing values as well. The proposed method augments the conditional VAEs with a prior distribution for the missing covariates and estimates their posterior using amortised variational inference. At training time, our method marginalises the uncertainty associated with the missing covariates while simultaneously maximising the evidence lower bound. We develop computationally efficient methods to learn CVAEs and GP prior VAEs that are compatible with mini-batching. Our experiments on simulated datasets as well as on a clinical trial study show that the proposed method outperforms previous methods in learning conditional VAEs from non-temporal, temporal, and longitudinal datasets.},
   langid = {english},
   pubstate = {preprint},
-  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
+  keywords = {Statistics - Machine Learning},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/83PMV4I4/Ramchandran et al. - 2022 - Learning Conditional Variational Autoencoders with.pdf}
 }
 
@@ -2038,7 +2152,6 @@
   urldate = {2023-05-30},
   abstract = {In a world of daily emerging scientific inquisition and discovery, the prolific launch of machine learning across industries comes to little surprise for those familiar with the potential of ML. Neither so should the congruent expansion of ethics-focused research that emerged as a response to issues of bias and unfairness that stemmed from those very same applications. Fairness research, which focuses on techniques to combat algorithmic bias, is now more supported than ever before. A large portion of fairness research has gone to producing tools that machine learning practitioners can use to audit for bias while designing their algorithms. Nonetheless, there is a lack of application of these fairness solutions in practice. This systematic review provides an in-depth summary of the algorithmic bias issues that have been defined and the fairness solution space that has been proposed. Moreover, this review provides an in-depth breakdown of the caveats to the solution space that have arisen since their release and a taxonomy of needs that have been proposed by machine learning practitioners, fairness researchers, and institutional stakeholders. These needs have been organized and addressed to the parties most influential to their implementation, which includes fairness researchers, organizations that produce ML algorithms, and the machine learning practitioners themselves. These findings can be used in the future to bridge the gap between practitioners and fairness experts and inform the creation of usable fair ML toolkits.},
   pubstate = {preprint},
-  keywords = {Computer Science - Artificial Intelligence},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/Y65K7WLD/Richardson y Gilbert - 2021 - A Framework for Fairness A Systematic Review of E.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/CZ2AESLC/2112.html}
 }
 
@@ -2215,7 +2328,7 @@
   urldate = {2022-11-15},
   abstract = {Recommendation algorithms that incorporate techniques from deep learning are becoming increasingly popular. Due to the structure of the data coming from recommendation domains (i.e., one-hot-encoded vectors of item preferences), these algorithms tend to have large input and output dimensionalities that dominate their overall size. This makes them difficult to train, due to the limited memory of graphical processing units, and difficult to deploy on mobile devices with limited hardware. To address these difficulties, we propose Bloom embeddings, a compression technique that can be applied to the input and output of neural network models dealing with sparse high-dimensional binary-coded instances. Bloom embeddings are computationally efficient, and do not seriously compromise the accuracy of the model up to 1/5 compression ratios. In some cases, they even improve over the original accuracy, with relative increases up to 12\%. We evaluate Bloom embeddings on 7 data sets and compare it against 4 alternative methods, obtaining favorable results. We also discuss a number of further advantages of Bloom embeddings, such as 'on-the-fly' constant-time operation, zero or marginal space requirements, training time speedups, or the fact that they do not require any change to the core model architecture or training configuration.},
   pubstate = {preprint},
-  keywords = {Computer Science - Artificial Intelligence,Computer Science - Information Retrieval,Computer Science - Machine Learning,Computer Science - Neural and Evolutionary Computing},
+  keywords = {Computer Science - Information Retrieval},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/WQIQB82R/Serrà y Karatzoglou - 2017 - Getting deep recommenders fit Bloom embeddings fo.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/8XZT2UYU/1706.html}
 }
 
@@ -2276,8 +2389,7 @@
   url = {http://arxiv.org/abs/2306.04971},
   urldate = {2023-06-27},
   abstract = {We survey eight recent works by our group, involving the successful blending of evolutionary algorithms with machine learning and deep learning: 1. Binary and Multinomial Classification through Evolutionary Symbolic Regression, 2. Classy Ensemble: A Novel Ensemble Algorithm for Classification, 3. EC-KitY: Evolutionary Computation Tool Kit in Python, 4. Evolution of Activation Functions for Deep Learning-Based Image Classification, 5. Adaptive Combination of a Genetic Algorithm and Novelty Search for Deep Neuroevolution, 6. An Evolutionary, Gradient-Free, Query-Efficient, Black-Box Algorithm for Generating Adversarial Instances in Deep Networks, 7. Foiling Explanations in Deep Neural Networks, 8. Patch of Invisibility: Naturalistic Black-Box Adversarial Attacks on Object Detectors.},
-  pubstate = {preprint},
-  keywords = {Computer Science - Machine Learning,Computer Science - Neural and Evolutionary Computing}
+  pubstate = {preprint}
 }
 
 @online{skylakiNamedEntityRecognition2020,
@@ -2291,7 +2403,7 @@
   urldate = {2022-11-09},
   abstract = {Named Entity Recognition (NER) is the task of identifying and classifying named entities in unstructured text. In the legal domain, named entities of interest may include the case parties, judges, names of courts, case numbers, references to laws etc. We study the problem of legal NER with noisy text extracted from PDF files of filed court cases from US courts. The "gold standard" training data for NER systems provide annotation for each token of the text with the corresponding entity or non-entity label. We work with only partially complete training data, which differ from the gold standard NER data in that the exact location of the entities in the text is unknown and the entities may contain typos and/or OCR mistakes. To overcome the challenges of our noisy training data, e.g. text extraction errors and/or typos and unknown label indices, we formulate the NER task as a text-to-text sequence generation task and train a pointer generator network to generate the entities in the document rather than label them. We show that the pointer generator can be effective for NER in the absence of gold standard data and outperforms the common NER neural network architectures in long legal documents.},
   pubstate = {preprint},
-  keywords = {Computer Science - Computation and Language,Computer Science - Information Retrieval,Computer Science - Machine Learning},
+  keywords = {Computer Science - Computation and Language,Computer Science - Information Retrieval},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/AZF2EWVY/Skylaki et al. - 2020 - Named Entity Recognition in the Legal Domain using.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/8JB392QW/2012.html}
 }
 
@@ -2307,7 +2419,6 @@
   urldate = {2023-09-05},
   abstract = {Evolutionary algorithm research and applications began over 50 years ago. Like other artificial intelligence techniques, evolutionary algorithms will likely see increased use and development due to the increased availability of computation, more robust and available open source software libraries, and the increasing demand for artificial intelligence techniques. As these techniques become more adopted and capable, it is the right time to take a perspective of their ability to integrate into society and the human processes they intend to augment. In this review, we explore a new taxonomy of evolutionary algorithms and resulting classifications that look at five main areas: the ability to manage the control of the environment with limiters, the ability to explain and repeat the search process, the ability to understand input and output causality within a solution, the ability to manage algorithm bias due to data or user design, and lastly, the ability to add corrective measures. These areas are motivated by today's pressures on industry to conform to both societies concerns and new government regulatory rules. As many reviews of evolutionary algorithms exist, after motivating this new taxonomy, we briefly classify a broad range of algorithms and identify areas of future research.},
   pubstate = {preprint},
-  keywords = {Computer Science - Machine Learning,Computer Science - Neural and Evolutionary Computing},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/C2YSNM3L/Sloss y Gustafson - 2019 - 2019 Evolutionary Algorithms Review.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/8V2L9GBA/1906.html}
 }
 
@@ -2342,7 +2453,7 @@
   urldate = {2023-05-17},
   abstract = {Language models demonstrate both quantitative improvement and new qualitative capabilities with increasing scale. Despite their potentially transformative impact, these new capabilities are as yet poorly characterized. In order to inform future research, prepare for disruptive new model capabilities, and ameliorate socially harmful effects, it is vital that we understand the present and near-future capabilities and limitations of language models. To address this challenge, we introduce the Beyond the Imitation Game benchmark (BIG-bench). BIG-bench currently consists of 204 tasks, contributed by 442 authors across 132 institutions. Task topics are diverse, drawing problems from linguistics, childhood development, math, common-sense reasoning, biology, physics, social bias, software development, and beyond. BIG-bench focuses on tasks that are believed to be beyond the capabilities of current language models. We evaluate the behavior of OpenAI's GPT models, Google-internal dense transformer architectures, and Switch-style sparse transformers on BIG-bench, across model sizes spanning millions to hundreds of billions of parameters. In addition, a team of human expert raters performed all tasks in order to provide a strong baseline. Findings include: model performance and calibration both improve with scale, but are poor in absolute terms (and when compared with rater performance); performance is remarkably similar across model classes, though with benefits from sparsity; tasks that improve gradually and predictably commonly involve a large knowledge or memorization component, whereas tasks that exhibit "breakthrough" behavior at a critical scale often involve multiple steps or components, or brittle metrics; social bias typically increases with scale in settings with ambiguous context, but this can be improved with prompting.},
   pubstate = {preprint},
-  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Computers and Society,Computer Science - Machine Learning,Statistics - Machine Learning},
+  keywords = {Computer Science - Computation and Language,Computer Science - Computers and Society,Statistics - Machine Learning},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/4RQH4XC7/Srivastava et al. - 2022 - Beyond the Imitation Game Quantifying and extrapo.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/LS8WDS8C/2206.html}
 }
 
@@ -2426,6 +2537,24 @@
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/EUZ6AMNU/Tibshirani y Friedman - Valerie and Patrick Hastie.pdf}
 }
 
+@article{tongSurrogateModelsEvolutionary2021,
+  title = {Surrogate Models in Evolutionary Single-Objective Optimization: {{A}} New Taxonomy and Experimental Study},
+  shorttitle = {Surrogate Models in Evolutionary Single-Objective Optimization},
+  author = {Tong, Hao and Huang, Changwu and Minku, Leandro L. and Yao, Xin},
+  date = {2021-07-01},
+  journaltitle = {Information Sciences},
+  shortjournal = {Information Sciences},
+  volume = {562},
+  pages = {414--437},
+  issn = {0020-0255},
+  doi = {10.1016/j.ins.2021.03.002},
+  url = {https://www.sciencedirect.com/science/article/pii/S0020025521002395},
+  urldate = {2023-09-27},
+  abstract = {Surrogate-assisted evolutionary algorithms (SAEAs), which use efficient surrogate models or meta-models to approximate the fitness function in evolutionary algorithms (EAs), are effective and popular methods for solving computationally expensive optimization problems. During the past decades, a number of SAEAs have been proposed by combining different surrogate models and EAs. This paper dedicates to providing a more systematical review and comprehensive empirical study of surrogate models used in single-objective SAEAs. A new taxonomy of surrogate models in SAEAs for single-objective optimization is introduced in this paper. Surrogate models are classified into two major categories: absolute fitness models, which directly approximate the fitness function values of candidate solutions, and relative fitness models, which estimates the relative rank or preference of candidates rather than their fitness values. Then, the characteristics of different models are analyzed and compared by conducting a series of experiments in terms of time complexity (execution time), model accuracy, parameter influence, and the overall performance when used in EAs. The empirical results are helpful for researchers to select suitable surrogate models when designing SAEAs. Open research questions and future work are discussed at the end of the paper.},
+  keywords = {Absolute fitness models,Evolutionary algorithms,Expensive optimization problems,Relative fitness models,Surrogate models},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/UN95MP9I/Tong et al. - 2021 - Surrogate models in evolutionary single-objective .pdf}
+}
+
 @online{torres-morenoArtexAnotheRTEXt2012,
   title = {Artex Is {{AnotheR TEXt}} Summarizer},
   author = {Torres-Moreno, Juan-Manuel},
@@ -2437,7 +2566,7 @@
   urldate = {2022-11-15},
   abstract = {This paper describes Artex, another algorithm for Automatic Text Summarization. In order to rank sentences, a simple inner product is calculated between each sentence, a document vector (text topic) and a lexical vector (vocabulary used by a sentence). Summaries are then generated by assembling the highest ranked sentences. No ruled-based linguistic post-processing is necessary in order to obtain summaries. Tests over several datasets (coming from Document Understanding Conferences (DUC), Text Analysis Conferences (TAC), evaluation campaigns, etc.) in French, English and Spanish have shown that summarizer achieves interesting results.},
   pubstate = {preprint},
-  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Information Retrieval},
+  keywords = {Computer Science - Computation and Language,Computer Science - Information Retrieval},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/6J7GZZAR/Torres-Moreno - 2012 - Artex is AnotheR TEXt summarizer.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/DFTCYQZM/1210.html}
 }
 
@@ -2461,7 +2590,6 @@
   urldate = {2023-09-15},
   abstract = {In an effort to advocate the research for a deep learning-based machine failure detection system, we present a case study of our proposed system based on a tiny sound dataset. Our case study investigates a variational autoencoder (VAE) for augmenting a small drill sound dataset from Valmet AB. A Valmet dataset contains 134 sounds that have been divided into two categories: "Anomaly" and "Normal" recorded from a drilling machine in Valmet AB, a company in Sundsvall, Sweden that supplies equipment and processes for the production of biofuels. Using deep learning models to detect failure drills on such a small sound dataset is typically unsuccessful. We employed a VAE to increase the number of sounds in the tiny dataset by synthesizing new sounds from original sounds. The augmented dataset was created by combining these synthesized sounds with the original sounds. We used a high-pass filter with a passband frequency of 1000 Hz and a low-pass filter with a passband frequency of 22\textbackslash kern 0.16667em000 Hz to pre-process sounds in the augmented dataset before transforming them to Mel spectrograms. The pre-trained 2D-CNN Alexnet was then trained using these Mel spectrograms. When compared to using the original tiny sound dataset to train pre-trained Alexnet, using the augmented sound dataset enhanced the CNN model's classification results by 6.62\textbackslash\%(94.12\textbackslash\% when trained on the augmented dataset versus 87.5\textbackslash\% when trained on the original dataset).},
   pubstate = {preprint},
-  keywords = {Computer Science - Machine Learning,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/LVDZS8V4/Tran et al. - 2022 - An artificial neural network-based system for dete.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/SY9S65MU/2209.html}
 }
 
@@ -2565,7 +2693,7 @@
   urldate = {2022-11-16},
   abstract = {Named Entity Recognition (NER) is a well researched NLP task and is widely used in real world NLP scenarios. NER research typically focuses on the creation of new ways of training NER, with relatively less emphasis on resources and evaluation. Further, state of the art (SOTA) NER models, trained on standard datasets, typically report only a single performance measure (F-score) and we don't really know how well they do for different entity types and genres of text, or how robust are they to new, unseen entities. In this paper, we perform a broad evaluation of NER using a popular dataset, that takes into consideration various text genres and sources constituting the dataset at hand. Additionally, we generate six new adversarial test sets through small perturbations in the original test set, replacing select entities while retaining the context. We also train and test our models on randomly generated train/dev/test splits followed by an experiment where the models are trained on a select set of genres but tested genres not seen in training. These comprehensive evaluation strategies were performed using three SOTA NER models. Based on our results, we recommend some useful reporting practices for NER researchers, that could help in providing a better understanding of a SOTA model's performance in future.},
   pubstate = {preprint},
-  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
+  keywords = {Computer Science - Computation and Language},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/E8MJ8R3L/Vajjala y Balasubramaniam - 2022 - What do we Really Know about State of the Art NER.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/YVAS6LPA/2205.html}
 }
 
@@ -2581,7 +2709,7 @@
   urldate = {2022-11-02},
   abstract = {The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.},
   pubstate = {preprint},
-  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  keywords = {Computer Science - Computation and Language},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/ELQ2A888/Vaswani et al. - 2017 - Attention Is All You Need.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/U6DY9ABA/1706.html}
 }
 
@@ -2597,7 +2725,7 @@
   urldate = {2022-11-03},
   abstract = {The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.},
   pubstate = {preprint},
-  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  keywords = {Computer Science - Computation and Language},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/6KBERQZQ/Vaswani et al. - 2017 - Attention Is All You Need.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/VLBTXJZK/1706.html}
 }
 
@@ -2630,7 +2758,6 @@
   urldate = {2023-09-05},
   abstract = {Genetic algorithms, computer programs that simulate natural evolution, are increasingly applied across many disciplines. They have been used to solve various optimisation problems from neural network architecture search to strategic games, and to model phenomena of adaptation and learning. Expertise on the qualities and drawbacks of this technique is largely scattered across the literature or former, motivating an compilation of this knowledge at the light of the most recent developments of the field. In this review, we present genetic algorithms, their qualities, limitations and challenges, as well as some future development perspectives. Genetic algorithms are capable of exploring large and complex spaces of possible solutions, to quickly locate promising elements, and provide an adequate modelling tool to describe evolutionary systems, from games to economies. They however suffer from high computation costs, difficult parameter configuration, and crucial representation of the solutions. Recent developments such as GPU, parallel and quantum computing, conception of powerful parameter control methods, and novel approaches in representation strategies, may be keys to overcome those limitations. This compiling review aims at informing practitioners and newcomers in the field alike in their genetic algorithm research, and at outlining promising avenues for future research. It highlights the potential for interdisciplinary research associating genetic algorithms to pulse original discoveries in social sciences, open ended evolution, artificial life and AI.},
   pubstate = {preprint},
-  keywords = {{Computer Science - Distributed, Parallel, and Cluster Computing},Computer Science - Neural and Evolutionary Computing,Mathematics - Optimization and Control},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/IA4N8QY5/Vie et al. - 2021 - Qualities, challenges and future of genetic algori.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/VMWY68X2/2011.html}
 }
 
@@ -2738,7 +2865,7 @@
   urldate = {2023-05-31},
   abstract = {Fairlearn is an open source project to help practitioners assess and improve fairness of artificial intelligence (AI) systems. The associated Python library, also named fairlearn, supports evaluation of a model's output across affected populations and includes several algorithms for mitigating fairness issues. Grounded in the understanding that fairness is a sociotechnical challenge, the project integrates learning resources that aid practitioners in considering a system's broader societal context.},
   pubstate = {preprint},
-  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computers and Society,Computer Science - Machine Learning},
+  keywords = {Computer Science - Computers and Society},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/KBAKWZA4/Weerts et al. - 2023 - Fairlearn Assessing and Improving Fairness of AI .pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/6AYMW438/2303.html}
 }
 
@@ -2798,7 +2925,6 @@
   urldate = {2023-08-28},
   abstract = {The surrogate loss of variational autoencoders (VAEs) poses various challenges to their training, inducing the imbalance between task fitting and representation inference. To avert this, the existing strategies for VAEs focus on adjusting the tradeoff by introducing hyperparameters, deriving a tighter bound under some mild assumptions, or decomposing the loss components per certain neural settings. VAEs still suffer from uncertain tradeoff learning.We propose a novel evolutionary variational autoencoder (eVAE) building on the variational information bottleneck (VIB) theory and integrative evolutionary neural learning. eVAE integrates a variational genetic algorithm into VAE with variational evolutionary operators including variational mutation, crossover, and evolution. Its inner-outer-joint training mechanism synergistically and dynamically generates and updates the uncertain tradeoff learning in the evidence lower bound (ELBO) without additional constraints. Apart from learning a lossy compression and representation of data under the VIB assumption, eVAE presents an evolutionary paradigm to tune critical factors of VAEs and deep neural networks and addresses the premature convergence and random search problem by integrating evolutionary optimization into deep learning. Experiments show that eVAE addresses the KL-vanishing problem for text generation with low reconstruction loss, generates all disentangled factors with sharp images, and improves the image generation quality,respectively. eVAE achieves better reconstruction loss, disentanglement, and generation-inference balance than its competitors.},
   pubstate = {preprint},
-  keywords = {Computer Science - Machine Learning,Computer Science - Neural and Evolutionary Computing},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/2RYGPFIF/Wu et al. - 2023 - eVAE Evolutionary Variational Autoencoder.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/EWP7WMQI/2301.html}
 }
 
@@ -2845,7 +2971,7 @@
   urldate = {2023-06-05},
   abstract = {We consider training machine learning models that are fair in the sense that their performance is invariant under certain sensitive perturbations to the inputs. For example, the performance of a resume screening system should be invariant under changes to the gender and/or ethnicity of the applicant. We formalize this notion of algorithmic fairness as a variant of individual fairness and develop a distributionally robust optimization approach to enforce it during training. We also demonstrate the effectiveness of the approach on two ML tasks that are susceptible to gender and racial biases.},
   pubstate = {preprint},
-  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
+  keywords = {Statistics - Machine Learning},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/4UPVYMQY/Yurochkin et al. - 2020 - Training individually fair ML models with Sensitiv.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/AFPMCLF5/1907.html}
 }
 
@@ -2860,7 +2986,7 @@
   urldate = {2022-11-08},
   abstract = {The task of Named Entity Recognition (NER) is an important component of many natural language processing systems, such as relation extraction and knowledge graph construction. In this work, we present a simple and effective approach for Named Entity Recognition. The main idea of our approach is to encode the input subword sequence with a pre-trained transformer such as BERT, and then, instead of directly classifying the word labels, another layer of transformer is added to the subword representation to better encode the word-level interaction. We evaluate our approach on three benchmark datasets for scientific NER, particularly in the computer science and biomedical domains. Experimental results show that our model outperforms the current state-of-the-art on SciERC and TDM datasets without requiring external resources or specific data augmentation. Code is available at \textbackslash url\{https://github.com/urchade/HNER\}.},
   pubstate = {preprint},
-  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  keywords = {Computer Science - Computation and Language},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/2Q3UT4F9/Zaratiana et al. - 2022 - Hierarchical Transformer Model for Scientific Name.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/S7LALJ28/2203.html}
 }
 
@@ -2879,6 +3005,7 @@
   urldate = {2023-08-26},
   abstract = {Due to sharp increases in data dimensions, working on every data mining or machine learning (ML) task requires more efficient techniques to get the desired results. Therefore, in recent years, researchers have proposed and developed many methods and techniques to reduce the high dimensions of data and to attain the required accuracy. To ameliorate the accuracy of learning features as well as to decrease the training time dimensionality reduction is used as a pre-processing step, which can eliminate irrelevant data, noise, and redundant features. Dimensionality reduction (DR) has been performed based on two main methods, which are feature selection (FS) and feature extraction (FE). FS is considered an important method because data is generated continuously at an ever-increasing rate; some serious dimensionality problems can be reduced with this method, such as decreasing redundancy effectively, eliminating irrelevant data, and ameliorating result comprehensibility. Moreover, FE transacts with the problem of finding the most distinctive, informative, and decreased set of features to ameliorate the efficiency of both the processing and storage of data. This paper offers a comprehensive approach to FS and FE in the scope of DR. Moreover, the details of each paper, such as used algorithms/approaches, datasets, classifiers, and achieved results are comprehensively analyzed and summarized. Besides, a systematic discussion of all of the reviewed methods to highlight authors' trends, determining the method(s) has been done, which significantly reduced computational time, and selecting the most accurate classifiers. As a result, the different types of both methods have been discussed and analyzed the findings.},
   langid = {english},
+  keywords = {fs\_desafios},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/EEYN9SK9/Zebari et al. - 2020 - A Comprehensive Review of Dimensionality Reduction.pdf}
 }
 
@@ -2931,6 +3058,21 @@
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/MT8WEKHT/2304.pdf}
 }
 
+@online{zhaoDeeperUnderstandingVariational2017,
+  title = {Towards {{Deeper Understanding}} of {{Variational Autoencoding Models}}},
+  author = {Zhao, Shengjia and Song, Jiaming and Ermon, Stefano},
+  date = {2017-02-28},
+  eprint = {1702.08658},
+  eprinttype = {arxiv},
+  eprintclass = {cs, stat},
+  url = {http://arxiv.org/abs/1702.08658},
+  urldate = {2023-09-24},
+  abstract = {We propose a new family of optimization criteria for variational auto-encoding models, generalizing the standard evidence lower bound. We provide conditions under which they recover the data distribution and learn latent features, and formally show that common issues such as blurry samples and uninformative latent features arise when these conditions are not met. Based on these new insights, we propose a new sequential VAE model that can generate sharp samples on the LSUN image dataset based on pixel-wise reconstruction loss, and propose an optimization criterion that encourages unsupervised learning of informative latent features.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/LY8L9IWR/Zhao et al. - 2017 - Towards Deeper Understanding of Variational Autoen.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/VQMM2EWN/1702.html}
+}
+
 @article{zhaoSpectralFeatureSelection,
   title = {Spectral {{Feature Selection}} for {{Data Mining}}},
   author = {Zhao, Zheng Alan and Liu, Huan},
@@ -2951,7 +3093,6 @@
   urldate = {2023-09-22},
   abstract = {Concept drift refers to a non stationary learning problem over time. The training and the application data often mismatch in real life problems. In this report we present a context of concept drift problem 1. We focus on the issues relevant to adaptive training set formation. We present the framework and terminology, and formulate a global picture of concept drift learners design. We start with formalizing the framework for the concept drifting data in Section 1. In Section 2 we discuss the adaptivity mechanisms of the concept drift learners. In Section 3 we overview the principle mechanisms of concept drift learners. In this chapter we give a general picture of the available algorithms and categorize them based on their properties. Section 5 discusses the related research fields and Section 5 groups and presents major concept drift applications. This report is intended to give a bird's view of concept drift research field, provide a context of the research and position it within broad spectrum of research fields and applications.},
   pubstate = {preprint},
-  keywords = {Computer Science - Artificial Intelligence},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/4K5MWPKQ/Žliobaitė - 2010 - Learning under Concept Drift an Overview.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/TUIFHJAQ/1010.html}
 }
 
