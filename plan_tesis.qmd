@@ -61,13 +61,21 @@ A la fecha de publicación del presente trabajo no hemos encontrado experiencias
 
 ## Estado del arte
 
-La aplicación de AVs como técnica de aumentación de datos es extendida fuera del campo de los AGs. Se aplica al tratamiento varios tipos de datos: imágenes [@fajardoOversamplingImbalancedData2021; @aiGenerativeOversamplingImbalanced2023; @khmaissiaConfidenceGuidedDataAugmentation2023; @kwarciakDeepGenerativeNetworks2023], texto [@zhangImproveDiverseText2019] , habla [@blaauwModelingTransformingSpeech2016; @latifVariationalAutoencodersLearning2020] y música [@robertsHierarchicalLatentVector2019], y distintos formatos: tabulares [@leelarathnaEnhancingRepresentationLearning2023], longitudinales [@ramchandranLearningConditionalVariational2022] y grafos [@liuConstrainedGraphVariational2018].
+La aplicación de AVs como técnica de aumentación de datos es extendida fuera del campo de los AGs. Se aplica al tratamiento varios tipos de datos: imágenes [@fajardoOversamplingImbalancedData2021; @aiGenerativeOversamplingImbalanced2023; @khmaissiaConfidenceGuidedDataAugmentation2023; @kwarciakDeepGenerativeNetworks2023], texto [@zhangImproveDiverseText2019] , habla [@blaauwModelingTransformingSpeech2016; @latifVariationalAutoencodersLearning2020] y música [@robertsHierarchicalLatentVector2019], y distintos formatos: tabulares [@leelarathnaEnhancingRepresentationLearning2023], longitudinales [@ramchandranLearningConditionalVariational2022] y grafos [@liuConstrainedGraphVariational2018]. En lo que sigue nos enfocaremos en el uso de AVs en el marco del problema de selección de características. 
 
-Particularmente su aplicación a problemas de datos desbalanceados o alta dimensionalidad y bajo número de muestras ha mostrado buenos resultados.
+Así en @fajardoOversamplingImbalancedData2021 se investiga si los AVs y las redes generativas antagónicas (GAN) pueden aumentar datos desbalanceados via sobremuestreo de las clases minoritarias, y luego mejorar el rendimiento de un clasificador. Para ello se crean versionanes desbalanceadas de reconocidos datos multiclase MNIST y Fashion MNIST, a los cuales, posteriormente, se los re-balancea agregándoles muestras sintéticas generadas por un AV condicionado por clase (AV Condicional). Para la tarea de clasificación se emplea un Perceptrón Multicapa (MLP) y se evalúa su desempeño a partir de  F1....
 
-\[desarrollar :
+además se evalúa la calidad de los datos generados mediante Distancia de inicio de Fréchet
 
-En @fajardoOversamplingImbalancedData2021 se investiga si los modelos generativos condicionales profundos (específicamente las variantes condicionales de las redes generativas antagónicas (GANs) y los autoencoders variacionales (AVs)), pueden aprender efectivamente las distribuciones de las clases minoritarias. El artículo busca determinar si estos modelos pueden generar observaciones sintéticas que mejoren el rendimiento de un clasificador. Los resultados indican que efectivamente los modelos generativos profundos superan a los métodos tradicionales (ej. sobremuestreo) en problemas de clasificación, especialmente en casos de desequilibrio severo.
+
+
+
+Para ambos conjuntos de datos, MNIST y Fashion MNIST, empleamos un perceptrón multicapa sencillo (MLP) para la clasificación subsecuente. Como es habitual en los MLPs y otras arquitecturas de redes neuronales, los pesos de la red se inicializan aleatoriamente antes del entrenamiento. Como resultado, existe cierta cantidad de aleatoriedad en el rendimiento de la clasificación subsecuente. Por lo tanto, para cada uno de los 30 conjuntos de entrenamiento artificialmente desequilibrados de MNIST y Fashion MNIST, aumentados por un método de sobremuestreo dado, se entrenan tres modelos MLP subsecuentes separados. Esto implica que cada uno de los cinco conjuntos de entrenamiento asociados con el trío (𝐦, 𝐌, 𝜌) tienen tres colecciones de métricas de rendimiento del conjunto de prueba. Cada una de estas métricas se promedia en todas las 15 instancias para producir un único conjunto de medidas de rendimiento asociadas con un trío dado (𝐦, 𝐌, 𝜌).
+
+
+
+
+ Los resultados indican que efectivamente los modelos generativos profundos superan a los métodos tradicionales (ej. sobremuestreo) en problemas de clasificación, especialmente en casos de desequilibrio severo.
 
 En @aiGenerativeOversamplingImbalanced2023 se ataca el problema de datos desbalanceados y se propone una forma de aumentación de datos en la clase minoritaria que condiciona la generación de muestras a las características de la distribución que tienen los datos de la clase mayoritaria. El método se llama *Majority-Guided VAE* y procura incorporar en la generación información intraclase e interclases, con el fin de propagar la diversidad y riqueza de la mayoría en la minoría, y mitigar así el sobreajuste de los modelos.
 
