@@ -3,6 +3,10 @@
 
 <!--make pdf-->
 
+Export to docx
+
+quarto render plan_tesis.qmd --to docx
+
 ---
 
 Document template from: 

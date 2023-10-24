@@ -49,7 +49,7 @@ Los casos mencionados en el apartado ofrecen un conjunto de experiencias signifi
 
 ## Definición del problema
 
-La disponibilidad de datos muestrales afecta todo proceso de selección de características, y resulta particularmente condicionante en escenarios de alta dimensionalidad y bajo número de muestras. En el caso de selección de características mediante AGs la falta de datos muestrales impacta negativamente en la función de aptitud, y de esa forma limita la eficacia del algoritmo. Por eso, la técnica de aumentación de datos mediante AVs plantea una posible solución a este problema, ofreciendo distintas alternativas de implementación en el contexto de los AGs.
+La disponibilidad de datos muestrales afecta a los procesos de selección de características, y resulta particularmente condicionante en escenarios de alta dimensionalidad y bajo número de muestras. En el caso de selección de características mediante AGs la falta de datos muestrales impacta negativamente en la función de aptitud, y de esa forma limita la eficacia del algoritmo. Por eso, la técnica de aumentación de datos mediante AVs plantea una posible solución a este problema, ofreciendo distintas alternativas de implementación en el contexto de los AGs.
 
 ## Objetivos
 
@@ -63,7 +63,7 @@ La disponibilidad de datos muestrales afecta todo proceso de selección de carac
 
 3.  Evaluar el desempeño de las estrategias propuestas empleando conjuntos de datos de diferente tamaño y complejidad.
 
-4.  Comparar el desempeño de AGs con datos aumentados mediante las estrategias desarrolladas frente a implementaciones sin aumentación.
+4.  Comparar el desempeño de AGs con datos aumentados mediante las estrategias desarrolladas frente a implementaciones sin aumentación. 
 
 ## Metodologías
 
