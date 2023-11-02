@@ -22,7 +22,7 @@ activities = [
     "Redacción de la Tesis",
     #"Revisión y Corrección de la Tesis"
 ]
-durations = [4,4,4,5,8,3,4,6]
+durations = [4,4,4,5,7,4,4,6]
 
 # Create an 'n' array to enumerate the activities
 n = list(range(1, len(activities) + 1))
