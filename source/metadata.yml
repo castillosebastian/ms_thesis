@@ -1,14 +1,11 @@
 ---
-pagetitle: This is the HTML document title
-title: This is the title of the thesis
-subtitle: This is the subtitle of the thesis
-author: Firstname Surname
-date: January 2015
-location: University College London, UK
+author: Lic. Claudio Sebastián Castillo
+date: 2024
+location: Paraná, Entre Ríos, Argentina
 supervisor:
-- Professor Louis Fage
-- Captain J. Y. Cousteau
-degree: Doctor of Philosophy
+-  Dr. Matías Gerard - Director
+-  Dr. Leandro Vignolo - Co-Director
+degree: Minería de Datos
 eqnPrefix:
   - "Equation"
   - "Equations"

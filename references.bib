@@ -209,6 +209,23 @@
   annotation = {MAG ID: 2891239721 S2ID: a842960783d6b734eeb18ec6173218d7d34d6bbb}
 }
 
+@online{baiConstitutionalAIHarmlessness2022,
+  title = {Constitutional {{AI}}: {{Harmlessness}} from {{AI Feedback}}},
+  shorttitle = {Constitutional {{AI}}},
+  author = {Bai, Yuntao and Kadavath, Saurav and Kundu, Sandipan and Askell, Amanda and Kernion, Jackson and Jones, Andy and Chen, Anna and Goldie, Anna and Mirhoseini, Azalia and McKinnon, Cameron and Chen, Carol and Olsson, Catherine and Olah, Christopher and Hernandez, Danny and Drain, Dawn and Ganguli, Deep and Li, Dustin and Tran-Johnson, Eli and Perez, Ethan and Kerr, Jamie and Mueller, Jared and Ladish, Jeffrey and Landau, Joshua and Ndousse, Kamal and Lukosuite, Kamile and Lovitt, Liane and Sellitto, Michael and Elhage, Nelson and Schiefer, Nicholas and Mercado, Noemi and DasSarma, Nova and Lasenby, Robert and Larson, Robin and Ringer, Sam and Johnston, Scott and Kravec, Shauna and Showk, Sheer El and Fort, Stanislav and Lanham, Tamera and Telleen-Lawton, Timothy and Conerly, Tom and Henighan, Tom and Hume, Tristan and Bowman, Samuel R. and Hatfield-Dodds, Zac and Mann, Ben and Amodei, Dario and Joseph, Nicholas and McCandlish, Sam and Brown, Tom and Kaplan, Jared},
+  date = {2022-12-15},
+  eprint = {2212.08073},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2212.08073},
+  url = {http://arxiv.org/abs/2212.08073},
+  urldate = {2023-11-16},
+  abstract = {As AI systems become more capable, we would like to enlist their help to supervise other AIs. We experiment with methods for training a harmless AI assistant through self-improvement, without any human labels identifying harmful outputs. The only human oversight is provided through a list of rules or principles, and so we refer to the method as 'Constitutional AI'. The process involves both a supervised learning and a reinforcement learning phase. In the supervised phase we sample from an initial model, then generate self-critiques and revisions, and then finetune the original model on revised responses. In the RL phase, we sample from the finetuned model, use a model to evaluate which of the two samples is better, and then train a preference model from this dataset of AI preferences. We then train with RL using the preference model as the reward signal, i.e. we use 'RL from AI Feedback' (RLAIF). As a result we are able to train a harmless but non-evasive AI assistant that engages with harmful queries by explaining its objections to them. Both the SL and RL methods can leverage chain-of-thought style reasoning to improve the human-judged performance and transparency of AI decision making. These methods make it possible to control AI behavior more precisely and with far fewer human labels.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/JX9S6AKX/Bai et al. - 2022 - Constitutional AI Harmlessness from AI Feedback.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/E4CC7UY6/2212.html}
+}
+
 @online{barriereMayCheckAgain2019,
   title = {May {{I Check Again}}? -- {{A}} Simple but Efficient Way to Generate and Use Contextual Dictionaries for {{Named Entity Recognition}}. {{Application}} to {{French Legal Texts}}},
   shorttitle = {May {{I Check Again}}?},
@@ -595,6 +612,21 @@
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/H8SD7P9M/Chayer y Marcet - 2017 - Nueva gestión judicial oralidad en los procesos c.pdf}
 }
 
+@online{chengAdaptingLargeLanguage2023,
+  title = {Adapting {{Large Language Models}} via {{Reading Comprehension}}},
+  author = {Cheng, Daixuan and Huang, Shaohan and Wei, Furu},
+  date = {2023-09-18},
+  eprint = {2309.09530},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  url = {http://arxiv.org/abs/2309.09530},
+  urldate = {2023-12-04},
+  abstract = {We explore how continued pre-training on domain-specific corpora influences large language models, revealing that training on the raw corpora endows the model with domain knowledge, but drastically hurts its prompting ability for question answering. Taken inspiration from human learning via reading comprehension--practice after reading improves the ability to answer questions based on the learned knowledge--we propose a simple method for transforming raw corpora into reading comprehension texts. Each raw text is enriched with a series of tasks related to its content. Our method, highly scalable and applicable to any pre-training corpora, consistently enhances performance across various tasks in three different domains: biomedicine, finance, and law. Notably, our 7B language model achieves competitive performance with domain-specific models of much larger scales, such as BloombergGPT-50B. Furthermore, we demonstrate that domain-specific reading comprehension texts can improve the model's performance even on general benchmarks, showing the potential to develop a general model across even more domains. Our model, code, and data will be available at https://github.com/microsoft/LMOps.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/TBGZ2YVK/Cheng et al. - 2023 - Adapting Large Language Models via Reading Compreh.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/LI6JVLFG/2309.html}
+}
+
 @article{chenMeasuringCurseDimensionality2015,
   title = {Measuring the Curse of Dimensionality and Its Effects on Particle Swarm Optimization and Differential Evolution},
   author = {Chen, Stephen and Montgomery, James and Bolufé-Röhler, Antonio},
@@ -976,6 +1008,14 @@
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/3826XQJ8/Fajardo et al. - 2021 - On oversampling imbalanced data with deep conditio.pdf}
 }
 
+@online{Feature_ImportancesBewareDefault,
+  title = {Feature\_{{Importances}}:{{Beware Default Random Forest FI}}},
+  url = {http://explained.ai/decision-tree-viz/index.html},
+  urldate = {2023-11-23},
+  abstract = {Training a model that accurately predicts outcomes is great, but most of the time you don't just need predictions, you want to be able to interpret your model. The problem is that the scikit-learn Random Forest feature importance and R's default Random Forest feature importance strategies are biased. To get reliable results in Python, use permutation importance, provided here and in our rfpimp package (via pip). For R, use importance=T in the Random Forest constructor then type=1 in R's importance() function.},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/NK5EBGSL/rf-importance.html}
+}
+
 @online{felixDeepLearningNamed2020,
   title = {Deep {{Learning}} for {{Named Entity Recognition}} in {{Legal Domain}}},
   author = {Félix, Nadia and Soares, Anderson and Castro, Pedro},
@@ -1029,6 +1069,12 @@
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/DBXFMPPW/Findlay y Seah - 2020 - An Ecosystem Approach to Ethical AI and Data Use .pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/C7L9JADA/2101.html}
 }
 
+@video{FinGPTa,
+  entrysubtype = {video},
+  title = {{{FinGPT}}},
+  url = {https://medium.com/@ashkangolgoon/financial-llms-fingpt-bloomberggpt-82dda11a6c05#:~:text=Although%20BloombergGPT%20is%20not%20an,fine%2Dtuning%20of%20base%20LLMs.}
+}
+
 @online{FLANFlanV2,
   title = {{{FLAN}}/Flan/v2 at Main · Google-Research/{{FLAN}}},
   url = {https://github.com/google-research/FLAN},
@@ -1037,6 +1083,17 @@
   langid = {english},
   organization = {{GitHub}},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/9M3ASHQU/v2.html}
+}
+
+@video{FLANT5,
+  entrysubtype = {video},
+  title = {{{FLAN-T5}}},
+  url = {https://huggingface.co/docs/transformers/model_doc/t5}
+}
+
+@software{FLANT5_checkpoints,
+  title = {{{FLAN-T5}}\_checkpoints},
+  url = {https://github.com/google-research/t5x/blob/main/docs/models.md#flan-t5-checkpoints}
 }
 
 @article{floridiAI4PeopleEthicalFramework2018,
@@ -1091,6 +1148,23 @@
   abstract = {In this paper, we propose a new approach to learned optimization. As common in the literature, we represent the computation of the update step of the optimizer with a neural network. The parameters of the optimizer are then learned on a set of training optimization tasks, in order to perform minimisation efficiently. Our main innovation is to propose a new neural network architecture for the learned optimizer inspired by the classic BFGS algorithm. As in BFGS, we estimate a preconditioning matrix as a sum of rank-one updates but use a transformer-based neural network to predict these updates jointly with the step length and direction. In contrast to several recent learned optimization approaches, our formulation allows for conditioning across different dimensions of the parameter space of the target problem while remaining applicable to optimization tasks of variable dimensionality without retraining. We demonstrate the advantages of our approach on a benchmark composed of objective functions traditionally used for evaluation of optimization algorithms, as well as on the real world-task of physics-based reconstruction of articulated 3D human motion.},
   pubstate = {preprint},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/8YFXCK2X/Gärtner et al. - 2022 - Transformer-Based Learned Optimization.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/MHNMVHFK/2212.html}
+}
+
+@online{geMARTImprovingLLM2023,
+  title = {{{MART}}: {{Improving LLM Safety}} with {{Multi-round Automatic Red-Teaming}}},
+  shorttitle = {{{MART}}},
+  author = {Ge, Suyu and Zhou, Chunting and Hou, Rui and Khabsa, Madian and Wang, Yi-Chia and Wang, Qifan and Han, Jiawei and Mao, Yuning},
+  date = {2023-11-13},
+  eprint = {2311.07689},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2311.07689},
+  url = {http://arxiv.org/abs/2311.07689},
+  urldate = {2023-11-19},
+  abstract = {Red-teaming is a common practice for mitigating unsafe behaviors in Large Language Models (LLMs), which involves thoroughly assessing LLMs to identify potential flaws and addressing them with responsible and accurate responses. While effective, manual red-teaming is costly, and existing automatic red-teaming typically discovers safety risks without addressing them. In this paper, we propose a Multi-round Automatic Red-Teaming (MART) method, which incorporates both automatic adversarial prompt writing and safe response generation, significantly increasing red-teaming scalability and the safety of the target LLM. Specifically, an adversarial LLM and a target LLM interplay with each other in an iterative manner, where the adversarial LLM aims to generate challenging prompts that elicit unsafe responses from the target LLM, while the target LLM is fine-tuned with safety aligned data on these adversarial prompts. In each round, the adversarial LLM crafts better attacks on the updated target LLM, while the target LLM also improves itself through safety fine-tuning. On adversarial prompt benchmarks, the violation rate of an LLM with limited safety alignment reduces up to 84.7\% after 4 rounds of MART, achieving comparable performance to LLMs with extensive adversarial prompt writing. Notably, model helpfulness on non-adversarial prompts remains stable throughout iterations, indicating the target LLM maintains strong performance on instruction following.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/BWSSEU93/Ge et al. - 2023 - MART Improving LLM Safety with Multi-round Automa.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/NWJ9JSQI/2311.html}
 }
 
 @online{GeneticAlgorithmsFitness2023,
@@ -1394,6 +1468,23 @@
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/VY8R7JNJ/understanding-incontext.html}
 }
 
+@online{huangSurveyHallucinationLarge2023,
+  title = {A {{Survey}} on {{Hallucination}} in {{Large Language Models}}: {{Principles}}, {{Taxonomy}}, {{Challenges}}, and {{Open Questions}}},
+  shorttitle = {A {{Survey}} on {{Hallucination}} in {{Large Language Models}}},
+  author = {Huang, Lei and Yu, Weijiang and Ma, Weitao and Zhong, Weihong and Feng, Zhangyin and Wang, Haotian and Chen, Qianglong and Peng, Weihua and Feng, Xiaocheng and Qin, Bing and Liu, Ting},
+  date = {2023-11-09},
+  eprint = {2311.05232},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2311.05232},
+  url = {http://arxiv.org/abs/2311.05232},
+  urldate = {2023-11-11},
+  abstract = {The emergence of large language models (LLMs) has marked a significant breakthrough in natural language processing (NLP), leading to remarkable advancements in text understanding and generation. Nevertheless, alongside these strides, LLMs exhibit a critical tendency to produce hallucinations, resulting in content that is inconsistent with real-world facts or user inputs. This phenomenon poses substantial challenges to their practical deployment and raises concerns over the reliability of LLMs in real-world scenarios, which attracts increasing attention to detect and mitigate these hallucinations. In this survey, we aim to provide a thorough and in-depth overview of recent advances in the field of LLM hallucinations. We begin with an innovative taxonomy of LLM hallucinations, then delve into the factors contributing to hallucinations. Subsequently, we present a comprehensive overview of hallucination detection methods and benchmarks. Additionally, representative approaches designed to mitigate hallucinations are introduced accordingly. Finally, we analyze the challenges that highlight the current limitations and formulate open questions, aiming to delineate pathways for future research on hallucinations in LLMs.},
+  pubstate = {preprint},
+  keywords = {LLMs\_hallucinations},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/3BL2TKZ6/Huang et al. - 2023 - A Survey on Hallucination in Large Language Models.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/23EVS466/2311.html}
+}
+
 @dataset{isabelleguyonGisette2004,
   title = {Gisette},
   author = {Isabelle Guyon, Steve Gunn},
@@ -1530,6 +1621,28 @@
   keywords = {Crossover,Evolution,Genetic algorithm,Metaheuristic,Mutation,Optimization,Selection}
 }
 
+@article{kebailiDeepLearningApproaches2023,
+  title = {Deep {{Learning Approaches}} for {{Data Augmentation}} in {{Medical Imaging}}: {{A Review}}},
+  shorttitle = {Deep {{Learning Approaches}} for {{Data Augmentation}} in {{Medical Imaging}}},
+  author = {Kebaili, Aghiles and Lapuyade-Lahorgue, Jérôme and Ruan, Su},
+  date = {2023-04-13},
+  journaltitle = {Journal of Imaging},
+  shortjournal = {J. Imaging},
+  volume = {9},
+  number = {4},
+  eprint = {2307.13125},
+  eprinttype = {arxiv},
+  eprintclass = {cs, eess},
+  pages = {81},
+  issn = {2313-433X},
+  doi = {10.3390/jimaging9040081},
+  url = {http://arxiv.org/abs/2307.13125},
+  urldate = {2023-11-29},
+  abstract = {Deep learning has become a popular tool for medical image analysis, but the limited availability of training data remains a major challenge, particularly in the medical field where data acquisition can be costly and subject to privacy regulations. Data augmentation techniques offer a solution by artificially increasing the number of training samples, but these techniques often produce limited and unconvincing results. To address this issue, a growing number of studies have proposed the use of deep generative models to generate more realistic and diverse data that conform to the true distribution of the data. In this review, we focus on three types of deep generative models for medical image augmentation: variational autoencoders, generative adversarial networks, and diffusion models. We provide an overview of the current state of the art in each of these models and discuss their potential for use in different downstream tasks in medical imaging, including classification, segmentation, and cross-modal translation. We also evaluate the strengths and limitations of each model and suggest directions for future research in this field. Our goal is to provide a comprehensive review about the use of deep generative models for medical image augmentation and to highlight the potential of these models for improving the performance of deep learning algorithms in medical image analysis.},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition,Electrical Engineering and Systems Science - Image and Video Processing},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/GDFNHCTI/Kebaili et al. - 2023 - Deep Learning Approaches for Data Augmentation in .pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/KK3W74ZV/2307.html}
+}
+
 @article{khaireStabilityFeatureSelection2022,
   title = {Stability of Feature Selection Algorithm: {{A}} Review},
   shorttitle = {Stability of Feature Selection Algorithm},
@@ -1618,7 +1731,7 @@
   url = {http://arxiv.org/abs/1612.00796},
   urldate = {2023-10-03},
   abstract = {The ability to learn tasks in a sequential fashion is crucial to the development of artificial intelligence. Neural networks are not, in general, capable of this and it has been widely thought that catastrophic forgetting is an inevitable feature of connectionist models. We show that it is possible to overcome this limitation and train networks that can maintain expertise on tasks which they have not experienced for a long time. Our approach remembers old tasks by selectively slowing down learning on the weights important for those tasks. We demonstrate our approach is scalable and effective by solving a set of classification tasks based on the MNIST hand written digit dataset and by learning several Atari 2600 games sequentially.},
-  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Statistics - Machine Learning},
+  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/YIN5CF7B/Kirkpatrick et al. - 2017 - Overcoming catastrophic forgetting in neural netwo.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/NYXDU99H/1612.html}
 }
 
@@ -1888,6 +2001,40 @@
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/UW2KT5VX/language-model-safety-and-misuse.html}
 }
 
+@online{linHowTrainYour2023,
+  title = {How to {{Train Your DRAGON}}: {{Diverse Augmentation Towards Generalizable Dense Retrieval}}},
+  shorttitle = {How to {{Train Your DRAGON}}},
+  author = {Lin, Sheng-Chieh and Asai, Akari and Li, Minghan and Oguz, Barlas and Lin, Jimmy and Mehdad, Yashar and Yih, Wen-tau and Chen, Xilun},
+  date = {2023-02-14},
+  eprint = {2302.07452},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2302.07452},
+  url = {http://arxiv.org/abs/2302.07452},
+  urldate = {2023-11-16},
+  abstract = {Various techniques have been developed in recent years to improve dense retrieval (DR), such as unsupervised contrastive learning and pseudo-query generation. Existing DRs, however, often suffer from effectiveness tradeoffs between supervised and zero-shot retrieval, which some argue was due to the limited model capacity. We contradict this hypothesis and show that a generalizable DR can be trained to achieve high accuracy in both supervised and zero-shot retrieval without increasing model size. In particular, we systematically examine the contrastive learning of DRs, under the framework of Data Augmentation (DA). Our study shows that common DA practices such as query augmentation with generative models and pseudo-relevance label creation using a cross-encoder, are often inefficient and sub-optimal. We hence propose a new DA approach with diverse queries and sources of supervision to progressively train a generalizable DR. As a result, DRAGON, our dense retriever trained with diverse augmentation, is the first BERT-base-sized DR to achieve state-of-the-art effectiveness in both supervised and zero-shot evaluations and even competes with models using more complex late interaction (ColBERTv2 and SPLADE++).},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language,Computer Science - Information Retrieval},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/IJK2ZPJL/Lin et al. - 2023 - How to Train Your DRAGON Diverse Augmentation Tow.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/H5FYUXUD/2302.html}
+}
+
+@online{linRADITRetrievalAugmentedDual2023,
+  title = {{{RA-DIT}}: {{Retrieval-Augmented Dual Instruction Tuning}}},
+  shorttitle = {{{RA-DIT}}},
+  author = {Lin, Xi Victoria and Chen, Xilun and Chen, Mingda and Shi, Weijia and Lomeli, Maria and James, Rich and Rodriguez, Pedro and Kahn, Jacob and Szilvasy, Gergely and Lewis, Mike and Zettlemoyer, Luke and Yih, Scott},
+  date = {2023-11-05},
+  eprint = {2310.01352},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2310.01352},
+  url = {http://arxiv.org/abs/2310.01352},
+  urldate = {2023-11-11},
+  abstract = {Retrieval-augmented language models (RALMs) improve performance by accessing long-tail and up-to-date knowledge from external data stores, but are challenging to build. Existing approaches require either expensive retrieval-specific modifications to LM pre-training or use post-hoc integration of the data store that leads to suboptimal performance. We introduce Retrieval-Augmented Dual Instruction Tuning (RA-DIT), a lightweight fine-tuning methodology that provides a third option by retrofitting any LLM with retrieval capabilities. Our approach operates in two distinct fine-tuning steps: (1) one updates a pre-trained LM to better use retrieved information, while (2) the other updates the retriever to return more relevant results, as preferred by the LM. By fine-tuning over tasks that require both knowledge utilization and contextual awareness, we demonstrate that each stage yields significant performance improvements, and using both leads to additional gains. Our best model, RA-DIT 65B, achieves state-of-the-art performance across a range of knowledge-intensive zero- and few-shot learning benchmarks, significantly outperforming existing in-context RALM approaches by up to +8.9\% in 0-shot setting and +1.4\% in 5-shot setting on average.},
+  pubstate = {preprint},
+  keywords = {RAG},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/6LJW6EFB/Lin et al. - 2023 - RA-DIT Retrieval-Augmented Dual Instruction Tunin.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/Z85DGANA/2310.html}
+}
+
 @online{liSurveyDeepLearning2020,
   title = {A {{Survey}} on {{Deep Learning}} for {{Named Entity Recognition}}},
   author = {Li, Jing and Sun, Aixin and Han, Jianglei and Li, Chenliang},
@@ -1903,6 +2050,23 @@
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/RR4DBILH/Li et al. - 2020 - A Survey on Deep Learning for Named Entity Recogni.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/2UI9BSV7/1812.html}
 }
 
+@online{liuChipNeMoDomainAdaptedLLMs2023,
+  title = {{{ChipNeMo}}: {{Domain-Adapted LLMs}} for {{Chip Design}}},
+  shorttitle = {{{ChipNeMo}}},
+  author = {Liu, Mingjie and Ene, Teodor-Dumitru and Kirby, Robert and Cheng, Chris and Pinckney, Nathaniel and Liang, Rongjian and Alben, Jonah and Anand, Himyanshu and Banerjee, Sanmitra and Bayraktaroglu, Ismet and Bhaskaran, Bonita and Catanzaro, Bryan and Chaudhuri, Arjun and Clay, Sharon and Dally, Bill and Dang, Laura and Deshpande, Parikshit and Dhodhi, Siddhanth and Halepete, Sameer and Hill, Eric and Hu, Jiashang and Jain, Sumit and Khailany, Brucek and Kunal, Kishor and Li, Xiaowei and Liu, Hao and Oberman, Stuart and Omar, Sujeet and Pratty, Sreedhar and Raiman, Jonathan and Sarkar, Ambar and Shao, Zhengjiang and Sun, Hanfei and Suthar, Pratik P. and Tej, Varun and Xu, Kaizhe and Ren, Haoxing},
+  date = {2023-11-13},
+  eprint = {2311.00176},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2311.00176},
+  url = {http://arxiv.org/abs/2311.00176},
+  urldate = {2023-11-15},
+  abstract = {ChipNeMo aims to explore the applications of large language models (LLMs) for industrial chip design. Instead of directly deploying off-the-shelf commercial or open-source LLMs, we instead adopt the following domain adaptation techniques: custom tokenizers, domain-adaptive continued pretraining, supervised fine-tuning (SFT) with domain-specific instructions, and domain-adapted retrieval models. We evaluate these methods on three selected LLM applications for chip design: an engineering assistant chatbot, EDA script generation, and bug summarization and analysis. Our results show that these domain adaptation techniques enable significant LLM performance improvements over general-purpose base models across the three evaluated applications, enabling up to 5x model size reduction with similar or better performance on a range of design tasks. Our findings also indicate that there's still room for improvement between our current results and ideal outcomes. We believe that further investigation of domain-adapted LLM approaches will help close this gap in the future.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/I8QX5QZQ/Liu et al. - 2023 - ChipNeMo Domain-Adapted LLMs for Chip Design.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/BWX8EC6P/2311.html}
+}
+
 @inproceedings{liuConstrainedGraphVariational2018,
   title = {Constrained {{Graph Variational Autoencoders}} for {{Molecule Design}}},
   booktitle = {Advances in {{Neural Information Processing Systems}}},
@@ -1915,6 +2079,23 @@
   abstract = {Graphs are ubiquitous data structures for representing interactions between entities. With an emphasis on applications in chemistry, we explore the task of learning to generate graphs that conform to a distribution observed in training data. We propose a variational autoencoder model in which both encoder and decoder are graph-structured. Our decoder assumes a sequential ordering of graph extension steps and we discuss and analyze design choices that mitigate the potential downsides of this linearization. Experiments compare our approach with a wide range of baselines on the molecule generation task and show that our method is successful at matching the statistics of the original dataset on semantically important metrics. Furthermore, we show that by using appropriate shaping of the latent space, our model allows us to design molecules that are (locally) optimal in desired properties.},
   keywords = {estado\_arte},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/INSBVLH3/Liu et al. - 2018 - Constrained Graph Variational Autoencoders for Mol.pdf}
+}
+
+@online{liuLostMiddleHow2023,
+  title = {Lost in the {{Middle}}: {{How Language Models Use Long Contexts}}},
+  shorttitle = {Lost in the {{Middle}}},
+  author = {Liu, Nelson F. and Lin, Kevin and Hewitt, John and Paranjape, Ashwin and Bevilacqua, Michele and Petroni, Fabio and Liang, Percy},
+  date = {2023-07-31},
+  eprint = {2307.03172},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2307.03172},
+  url = {http://arxiv.org/abs/2307.03172},
+  urldate = {2023-11-21},
+  abstract = {While recent language models have the ability to take long contexts as input, relatively little is known about how well they use longer context. We analyze language model performance on two tasks that require identifying relevant information within their input contexts: multi-document question answering and key-value retrieval. We find that performance is often highest when relevant information occurs at the beginning or end of the input context, and significantly degrades when models must access relevant information in the middle of long contexts. Furthermore, performance substantially decreases as the input context grows longer, even for explicitly long-context models. Our analysis provides a better understanding of how language models use their input context and provides new evaluation protocols for future long-context models.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/Z737V6AM/Liu et al. - 2023 - Lost in the Middle How Language Models Use Long C.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/QAATBRN8/2307.html}
 }
 
 @online{liuMonolithRealTime2022,
@@ -1964,6 +2145,16 @@
   pubstate = {preprint},
   keywords = {Computer Science - Computation and Language},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/2D552HTJ/Liu et al. - 2022 - Rainier Reinforced Knowledge Introspector for Com.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/7UBB9E65/2210.html}
+}
+
+@software{Llama2_fullguide,
+  title = {Llama2\_fullguide},
+  url = {https://ai.meta.com/llama/get-started/?utm_source=linkedin&utm_medium=organic_social&utm_campaign=llama2&utm_content=image}
+}
+
+@software{LLMOps,
+  title = {{{LLMOps}}},
+  url = {https://developer.nvidia.com/blog/mastering-llm-techniques-llmops/}
 }
 
 @online{longpreFlanCollectionDesigning2023,
@@ -2050,7 +2241,6 @@
   urldate = {2023-09-27},
   abstract = {Automatic Music Generation (AMG) has become an interesting research topic for many scientists in artificial intelligence, who are also interested in the music industry. One of the main challenges in AMG is that there is no clear objective evaluation criterion that can measure the music grammar, structural rules, and audience satisfaction. Also, original music contains different elements that should work together, such as melody, harmony, and rhythm; but in the most of previous works, AMG works only for one element (e.g., melody). Therefore, in this paper, we propose a Multi-Objective Genetic Algorithm (MO-GA) to generate polyphonic music pieces, considering grammar and listener satisfaction. In this method, we use three objective functions. The first objective function is the accuracy of the generated music piece, based on music theory; and the other two objective functions are modeled scores provided by music experts and ordinary listeners. The scoring of experts and listeners separately are modeled using Bi-directional Long Short-Term Memory (Bi-LSTM) neural networks. The proposed music generation system tries to maximize mentioned objective functions to generate a new piece of music, including melody and harmony. The results show that the proposed method can generate pleasant pieces with desired styles and lengths, along with harmonic sounds that follow the grammar.},
   pubstate = {preprint},
-  keywords = {Computer Science - Artificial Intelligence},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/7TUZE2AB/Majidi y Toroghi - 2022 - A Combination of Multi-Objective Genetic Algorithm.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/N5N6S5XS/2102.html}
 }
 
@@ -2106,6 +2296,11 @@
   urldate = {2023-09-13},
   abstract = {Recent developments in Generative Deep Learning have fostered new engineering methods for protein design. Although deep generative models trained on protein sequence can learn biologically meaningful representations, the design of proteins with optimised properties remains a challenge. We combined deep learning architectures with evolutionary computation to steer the protein generative process towards specific sets of properties to address this problem. The latent space of a Variational Autoencoder is explored by evolutionary algorithms to find the best candidates. A set of single-objective and multi-objective problems were conceived to evaluate the algorithms\&\#x0027; capacity to optimise proteins. The optimisation tasks consider the average proteins\&\#x0027; hydrophobicity, their solubility and the probability of being generated by a defined functional Hidden Markov Model profile. The results show that Evolutionary Algorithms can achieve good results while allowing for more variability in the design of the experiment, thus resulting in a much greater set of possibly functional novel proteins.},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/RVIPQ6ZX/Martins et al. - 2022 - Variational Autoencoders and Evolutionary Algorith.pdf}
+}
+
+@software{Meditron_LLM_Medicine,
+  title = {Meditron\_{{LLM}}\_{{Medicine}}},
+  url = {https://github.com/epfLLM/meditron}
 }
 
 @online{mehrabiSurveyBiasFairness2022,
@@ -2187,6 +2382,11 @@
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/6EH42E9L/Mikolov et al. - 2013 - Efficient Estimation of Word Representations in Ve.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/IL2XSGG7/1301.html}
 }
 
+@software{MISTRAL7B_ftinstrucchatbot,
+  title = {{{MISTRAL-7B}}\_ft-Instruc-Chatbot},
+  url = {https://www.kaggle.com/models/mistral-ai/mistral}
+}
+
 @inproceedings{neumannScispaCyFastRobust2019,
   title = {{{ScispaCy}}: {{Fast}} and {{Robust Models}} for {{Biomedical Natural Language Processing}}},
   shorttitle = {{{ScispaCy}}},
@@ -2203,6 +2403,22 @@
   abstract = {Despite recent advances in natural language processing, many statistical models for processing text perform extremely poorly under domain shift. Processing biomedical and clinical text is a critically important application area of natural language processing, for which there are few robust, practical, publicly available models. This paper describes scispaCy, a new tool for practical biomedical/scientific text processing, which heavily leverages the spaCy library. We detail the performance of two packages of models released in scispaCy and demonstrate their robustness on several tasks and datasets. Models and code are available at https://allenai.github.io/scispacy/},
   keywords = {Computer Science - Computation and Language},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/63C4D6H4/Neumann et al. - 2019 - ScispaCy Fast and Robust Models for Biomedical Na.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/67MPJJUY/1902.html}
+}
+
+@online{noriCanGeneralistFoundation2023,
+  title = {Can {{Generalist Foundation Models Outcompete Special-Purpose Tuning}}? {{Case Study}} in {{Medicine}}},
+  shorttitle = {Can {{Generalist Foundation Models Outcompete Special-Purpose Tuning}}?},
+  author = {Nori, Harsha and Lee, Yin Tat and Zhang, Sheng and Carignan, Dean and Edgar, Richard and Fusi, Nicolo and King, Nicholas and Larson, Jonathan and Li, Yuanzhi and Liu, Weishung and Luo, Renqian and McKinney, Scott Mayer and Ness, Robert Osazuwa and Poon, Hoifung and Qin, Tao and Usuyama, Naoto and White, Chris and Horvitz, Eric},
+  date = {2023-11-27},
+  eprint = {2311.16452},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  url = {http://arxiv.org/abs/2311.16452},
+  urldate = {2023-12-04},
+  abstract = {Generalist foundation models such as GPT-4 have displayed surprising capabilities in a wide variety of domains and tasks. Yet, there is a prevalent assumption that they cannot match specialist capabilities of fine-tuned models. For example, most explorations to date on medical competency benchmarks have leveraged domain-specific training, as exemplified by efforts on BioGPT and Med-PaLM. We build on a prior study of GPT-4's capabilities on medical challenge benchmarks in the absence of special training. Rather than using simple prompting to highlight the model's out-of-the-box capabilities, we perform a systematic exploration of prompt engineering. We find that prompting innovation can unlock deeper specialist capabilities and show that GPT-4 easily tops prior leading results for medical benchmarks. The prompting methods we explore are general purpose, and make no specific use of domain expertise, removing the need for expert-curated content. Our experimental design carefully controls for overfitting during the prompt engineering process. We introduce Medprompt, based on a composition of several prompting strategies. With Medprompt, GPT-4 achieves state-of-the-art results on all nine of the benchmark datasets in the MultiMedQA suite. The method outperforms leading specialist models such as Med-PaLM 2 by a significant margin with an order of magnitude fewer calls to the model. Steering GPT-4 with Medprompt achieves a 27\% reduction in error rate on the MedQA dataset over the best methods to date achieved with specialist models and surpasses a score of 90\% for the first time. Beyond medical problems, we show the power of Medprompt to generalize to other domains and provide evidence for the broad applicability of the approach via studies of the strategy on exams in electrical engineering, machine learning, philosophy, accounting, law, nursing, and clinical psychology.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language,I.2.7},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/9HF84UPV/Nori et al. - 2023 - Can Generalist Foundation Models Outcompete Specia.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/I55WBV8D/2311.html}
 }
 
 @misc{NotaDesigningNeural,
@@ -2262,6 +2478,33 @@
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/46F72B57/Pais et al. - 2021 - Named Entity Recognition in the Romanian Legal Dom.pdf}
 }
 
+@article{papadimitriouNLPLinguisticCS224N,
+  title = {{{NLP}} and {{Linguistic}}: {{CS224N}}/{{Ling284}}},
+  author = {Papadimitriou, Isabel},
+  langid = {english},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/M48BTXQM/Papadimitriou - Natural Language Processing with Deep Learning CS2.pdf}
+}
+
+@article{papadopoulosVariationalAutoencodersData2023,
+  title = {Variational {{Autoencoders}} for {{Data Augmentation}} in {{Clinical Studies}}},
+  author = {Papadopoulos, Dimitris and Karalis, Vangelis D.},
+  date = {2023-01},
+  journaltitle = {Applied Sciences},
+  volume = {13},
+  number = {15},
+  pages = {8793},
+  publisher = {{Multidisciplinary Digital Publishing Institute}},
+  issn = {2076-3417},
+  doi = {10.3390/app13158793},
+  url = {https://www.mdpi.com/2076-3417/13/15/8793},
+  urldate = {2023-11-29},
+  abstract = {Sample size estimation is critical in clinical trials. A sample of adequate size can provide insights into a given population, but the collection of substantial amounts of data is costly and time-intensive. The aim of this study was to introduce a novel data augmentation approach in the field of clinical trials by employing variational autoencoders (VAEs). Several forms of VAEs were developed and used for the generation of virtual subjects. Various types of VAEs were explored and employed in the production of virtual individuals, and several different scenarios were investigated. The VAE-generated data exhibited similar performance to the original data, even in cases where a small proportion of them (e.g., 30–40\%) was used for the reconstruction of the generated data. Additionally, the generated data showed even higher statistical power than the original data in cases of high variability. This represents an additional advantage for the use of VAEs in situations of high variability, as they can act as noise reduction. The application of VAEs in clinical trials can be a useful tool for decreasing the required sample size and, consequently, reducing the costs and time involved. Furthermore, it aligns with ethical concerns surrounding human participation in trials.},
+  issue = {15},
+  langid = {english},
+  keywords = {clinical trials,data augmentation,sample size,variational autoencoders},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/AL8IDXHT/Papadopoulos y Karalis - 2023 - Variational Autoencoders for Data Augmentation in .pdf}
+}
+
 @online{PapersCodeBioBERT,
   title = {Papers with {{Code}} - {{BioBERT}}: A Pre-Trained Biomedical Language Representation Model for Biomedical Text Mining},
   shorttitle = {Papers with {{Code}} - {{BioBERT}}},
@@ -2305,6 +2548,29 @@
   annotation = {ARXIV\_ID: 2304.03995 S2ID: 67e4c70a76217ea46751b0dd3bccc7a4a971757d}
 }
 
+@video{RADIT,
+  entrysubtype = {video},
+  title = {{{RA-DIT}}},
+  url = {https://www.youtube.com/watch?v=rBpZvMAim5E}
+}
+
+@online{rafailovDirectPreferenceOptimization2023,
+  title = {Direct {{Preference Optimization}}: {{Your Language Model}} Is {{Secretly}} a {{Reward Model}}},
+  shorttitle = {Direct {{Preference Optimization}}},
+  author = {Rafailov, Rafael and Sharma, Archit and Mitchell, Eric and Ermon, Stefano and Manning, Christopher D. and Finn, Chelsea},
+  date = {2023-05-29},
+  eprint = {2305.18290},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2305.18290},
+  url = {http://arxiv.org/abs/2305.18290},
+  urldate = {2023-11-16},
+  abstract = {While large-scale unsupervised language models (LMs) learn broad world knowledge and some reasoning skills, achieving precise control of their behavior is difficult due to the completely unsupervised nature of their training. Existing methods for gaining such steerability collect human labels of the relative quality of model generations and fine-tune the unsupervised LM to align with these preferences, often with reinforcement learning from human feedback (RLHF). However, RLHF is a complex and often unstable procedure, first fitting a reward model that reflects the human preferences, and then fine-tuning the large unsupervised LM using reinforcement learning to maximize this estimated reward without drifting too far from the original model. In this paper, we leverage a mapping between reward functions and optimal policies to show that this constrained reward maximization problem can be optimized exactly with a single stage of policy training, essentially solving a classification problem on the human preference data. The resulting algorithm, which we call Direct Preference Optimization (DPO), is stable, performant and computationally lightweight, eliminating the need for fitting a reward model, sampling from the LM during fine-tuning, or performing significant hyperparameter tuning. Our experiments show that DPO can fine-tune LMs to align with human preferences as well as or better than existing methods. Notably, fine-tuning with DPO exceeds RLHF's ability to control sentiment of generations and improves response quality in summarization and single-turn dialogue while being substantially simpler to implement and train.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/EXJZHNMA/Rafailov et al. - 2023 - Direct Preference Optimization Your Language Mode.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/RC8UPDVQ/2305.html}
+}
+
 @article{ramaswamyMulticlassCancerDiagnosis2001,
   title = {Multiclass Cancer Diagnosis Using Tumor Gene Expression Signatures},
   author = {Ramaswamy, Sridhar and Tamayo, Pablo and Rifkin, Ryan and Mukherjee, Sayan and Yeang, Chen-Hsiang and Angelo, Michael and Ladd, Christine and Reich, Michael and Latulippe, Eva and Mesirov, Jill P. and Poggio, Tomaso and Gerald, William and Loda, Massimo and Lander, Eric S. and Golub, Todd R.},
@@ -2337,6 +2603,22 @@
   urldate = {2023-09-19},
   abstract = {The optimal treatment of patients with cancer depends on establishing accurate diagnoses by using a complex combination of clinical and histopathological data. In some instances, this task is difficult or impossible because of atypical clinical presentation or histopathology. To determine whether the diagnosis of multiple common adult malignancies could be achieved purely by molecular classification, we subjected 218 tumor samples, spanning 14 common tumor types, and 90 normal tissue samples to oligonucleotide microarray gene expression analysis. The expression levels of 16,063 genes and expressed sequence tags were used to evaluate the accuracy of a multiclass classifier based on a support vector machine algorithm. Overall classification accuracy was 78\%, far exceeding the accuracy of random classification (9\%). Poorly differentiated cancers resulted in low-confidence predictions and could not be accurately classified according to their tissue of origin, indicating that they are molecularly distinct entities with dramatically different gene expression patterns compared with their well differentiated counterparts. Taken together, these results demonstrate the feasibility of accurate, multiclass molecular cancer classification and suggest a strategy for future clinical implementation of molecular cancer diagnostics.},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/ZW5VENNW/Ramaswamy et al. - 2001 - Multiclass cancer diagnosis using tumor gene expre.pdf}
+}
+
+@article{ramaswamyMulticlassCancerDiagnosis2001b,
+  title = {Multiclass Cancer Diagnosis Using Tumor Gene Expression Signatures},
+  author = {Ramaswamy, Sridhar and Tamayo, Pablo and Rifkin, Ryan and Mukherjee, Sayan and Yeang, Chen-Hsiang and Angelo, Michael and Ladd, Christine and Reich, Michael and Latulippe, Eva and Mesirov, Jill P. and Poggio, Tomaso and Gerald, William and Loda, Massimo and Lander, Eric S. and Golub, Todd R.},
+  date = {2001-12-18},
+  journaltitle = {Proceedings of the National Academy of Sciences},
+  volume = {98},
+  number = {26},
+  pages = {15149--15154},
+  publisher = {{Proceedings of the National Academy of Sciences}},
+  doi = {10.1073/pnas.211566398},
+  url = {https://www.pnas.org/doi/full/10.1073/pnas.211566398},
+  urldate = {2023-11-24},
+  abstract = {The optimal treatment of patients with cancer depends on establishing accurate diagnoses by using a complex combination of clinical and histopathological data. In some instances, this task is difficult or impossible because of atypical clinical presentation or histopathology. To determine whether the diagnosis of multiple common adult malignancies could be achieved purely by molecular classification, we subjected 218 tumor samples, spanning 14 common tumor types, and 90 normal tissue samples to oligonucleotide microarray gene expression analysis. The expression levels of 16,063 genes and expressed sequence tags were used to evaluate the accuracy of a multiclass classifier based on a support vector machine algorithm. Overall classification accuracy was 78\%, far exceeding the accuracy of random classification (9\%). Poorly differentiated cancers resulted in low-confidence predictions and could not be accurately classified according to their tissue of origin, indicating that they are molecularly distinct entities with dramatically different gene expression patterns compared with their well differentiated counterparts. Taken together, these results demonstrate the feasibility of accurate, multiclass molecular cancer classification and suggest a strategy for future clinical implementation of molecular cancer diagnostics.},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/7A5FL6A6/Ramaswamy et al. - 2001 - Multiclass cancer diagnosis using tumor gene expre.pdf}
 }
 
 @online{ramchandranLearningConditionalVariational2022,
@@ -2796,6 +3078,22 @@
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/F2QRZQTY/Theodoridis y Koutroumbas - 2009 - Pattern recognition.pdf}
 }
 
+@online{tianFinetuningLanguageModels2023,
+  title = {Fine-Tuning {{Language Models}} for {{Factuality}}},
+  author = {Tian, Katherine and Mitchell, Eric and Yao, Huaxiu and Manning, Christopher D. and Finn, Chelsea},
+  date = {2023-11-14},
+  eprint = {2311.08401},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2311.08401},
+  url = {http://arxiv.org/abs/2311.08401},
+  urldate = {2023-11-20},
+  abstract = {The fluency and creativity of large pre-trained language models (LLMs) have led to their widespread use, sometimes even as a replacement for traditional search engines. Yet language models are prone to making convincing but factually inaccurate claims, often referred to as 'hallucinations.' These errors can inadvertently spread misinformation or harmfully perpetuate misconceptions. Further, manual fact-checking of model responses is a time-consuming process, making human factuality labels expensive to acquire. In this work, we fine-tune language models to be more factual, without human labeling and targeting more open-ended generation settings than past work. We leverage two key recent innovations in NLP to do so. First, several recent works have proposed methods for judging the factuality of open-ended text by measuring consistency with an external knowledge base or simply a large model's confidence scores. Second, the direct preference optimization algorithm enables straightforward fine-tuning of language models on objectives other than supervised imitation, using a preference ranking over possible model responses. We show that learning from automatically generated factuality preference rankings, generated either through existing retrieval systems or our novel retrieval-free approach, significantly improves the factuality (percent of generated claims that are correct) of Llama-2 on held-out topics compared with RLHF or decoding strategies targeted at factuality. At 7B scale, compared to Llama-2-chat, we observe 58\% and 40\% reduction in factual error rate when generating biographies and answering medical questions, respectively.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/PEQVTK83/Tian et al. - 2023 - Fine-tuning Language Models for Factuality.pdf}
+}
+
 @article{tibshiraniValeriePatrickHastie,
   title = {Valerie and {{Patrick Hastie}}},
   author = {Tibshirani, Sami and Friedman, Harry},
@@ -2937,6 +3235,11 @@
   urldate = {2022-11-19},
   abstract = {Language model (LM) pretraining has led to consistent improvements in many NLP downstream tasks, including named entity recognition (NER). In this paper, we present T-NER (Transformer-based Named Entity Recognition), a Python library for NER LM finetuning. In addition to its practical utility, T-NER facilitates the study and investigation of the cross-domain and cross-lingual generalization ability of LMs finetuned on NER. Our library also provides a web app where users can get model predictions interactively for arbitrary text, which facilitates qualitative model evaluation for non-expert programmers. We show the potential of the library by compiling nine public NER datasets into a unified format and evaluating the cross-domain and cross- lingual performance across the datasets. The results from our initial experiments show that in-domain performance is generally competitive across datasets. However, cross-domain generalization is challenging even with a large pretrained LM, which has nevertheless capacity to learn domain-specific features if fine- tuned on a combined dataset. To facilitate future research, we also release all our LM checkpoints via the Hugging Face model hub.},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/KJ8PGIM9/Ushio y Camacho-Collados - 2021 - T-NER An All-Round Python Library for Transformer.pdf}
+}
+
+@software{VAE_implementations,
+  title = {{{VAE}}\_implementations},
+  url = {https://github.com/AntixK/PyTorch-VAE}
 }
 
 @article{vajjalaWhatWeReally,
@@ -3118,6 +3421,23 @@
   keywords = {Cancer gene expression data sets,Evolutionary decomposition algorithm,High-dimensional medical data,Information feedback model,Medical machine learning,Multi objective,Multiple myeloma}
 }
 
+@online{wangSuperNaturalInstructionsGeneralizationDeclarative2022,
+  title = {Super-{{NaturalInstructions}}: {{Generalization}} via {{Declarative Instructions}} on 1600+ {{NLP Tasks}}},
+  shorttitle = {Super-{{NaturalInstructions}}},
+  author = {Wang, Yizhong and Mishra, Swaroop and Alipoormolabashi, Pegah and Kordi, Yeganeh and Mirzaei, Amirreza and Arunkumar, Anjana and Ashok, Arjun and Dhanasekaran, Arut Selvan and Naik, Atharva and Stap, David and Pathak, Eshaan and Karamanolakis, Giannis and Lai, Haizhi Gary and Purohit, Ishan and Mondal, Ishani and Anderson, Jacob and Kuznia, Kirby and Doshi, Krima and Patel, Maitreya and Pal, Kuntal Kumar and Moradshahi, Mehrad and Parmar, Mihir and Purohit, Mirali and Varshney, Neeraj and Kaza, Phani Rohitha and Verma, Pulkit and Puri, Ravsehaj Singh and Karia, Rushang and Sampat, Shailaja Keyur and Doshi, Savan and Mishra, Siddhartha and Reddy, Sujan and Patro, Sumanta and Dixit, Tanay and Shen, Xudong and Baral, Chitta and Choi, Yejin and Smith, Noah A. and Hajishirzi, Hannaneh and Khashabi, Daniel},
+  date = {2022-10-24},
+  eprint = {2204.07705},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2204.07705},
+  url = {http://arxiv.org/abs/2204.07705},
+  urldate = {2023-11-20},
+  abstract = {How well can NLP models generalize to a variety of unseen tasks when provided with task instructions? To address this question, we first introduce Super-NaturalInstructions, a benchmark of 1,616 diverse NLP tasks and their expert-written instructions. Our collection covers 76 distinct task types, including but not limited to classification, extraction, infilling, sequence tagging, text rewriting, and text composition. This large and diverse collection of tasks enables rigorous benchmarking of cross-task generalization under instructions -- training models to follow instructions on a subset of tasks and evaluating them on the remaining unseen ones. Furthermore, we build Tk-Instruct, a transformer model trained to follow a variety of in-context instructions (plain language task definitions or k-shot examples). Our experiments show that Tk-Instruct outperforms existing instruction-following models such as InstructGPT by over 9\% on our benchmark despite being an order of magnitude smaller. We further analyze generalization as a function of various scaling parameters, such as the number of observed tasks, the number of instances per task, and model sizes. We hope our dataset and model facilitate future progress towards more general-purpose NLP models.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/8IGATA78/Wang et al. - 2022 - Super-NaturalInstructions Generalization via Decl.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/Y5NBFZC6/2204.html}
+}
+
 @online{weertsFairlearnAssessingImproving2023,
   title = {Fairlearn: {{Assessing}} and {{Improving Fairness}} of {{AI Systems}}},
   shorttitle = {Fairlearn},
@@ -3178,6 +3498,40 @@
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/52LJCU6P/Wong et al. - 2016 - Understanding Data Augmentation for Classification.pdf}
 }
 
+@online{wuAutoGenEnablingNextGen2023,
+  title = {{{AutoGen}}: {{Enabling Next-Gen LLM Applications}} via {{Multi-Agent Conversation}}},
+  shorttitle = {{{AutoGen}}},
+  author = {Wu, Qingyun and Bansal, Gagan and Zhang, Jieyu and Wu, Yiran and Li, Beibin and Zhu, Erkang and Jiang, Li and Zhang, Xiaoyun and Zhang, Shaokun and Liu, Jiale and Awadallah, Ahmed Hassan and White, Ryen W. and Burger, Doug and Wang, Chi},
+  date = {2023-10-03},
+  eprint = {2308.08155},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2308.08155},
+  url = {http://arxiv.org/abs/2308.08155},
+  urldate = {2023-12-05},
+  abstract = {AutoGen is an open-source framework that allows developers to build LLM applications via multiple agents that can converse with each other to accomplish tasks. AutoGen agents are customizable, conversable, and can operate in various modes that employ combinations of LLMs, human inputs, and tools. Using AutoGen, developers can also flexibly define agent interaction behaviors. Both natural language and computer code can be used to program flexible conversation patterns for different applications. AutoGen serves as a generic infrastructure to build diverse applications of various complexities and LLM capacities. Empirical studies demonstrate the effectiveness of the framework in many example applications, with domains ranging from mathematics, coding, question answering, operations research, online decision-making, entertainment, etc.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/NXXFKQ75/Wu et al. - 2023 - AutoGen Enabling Next-Gen LLM Applications via Mu.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/IIZ4URYS/2308.html}
+}
+
+@online{wuBloombergGPTLargeLanguage2023,
+  title = {{{BloombergGPT}}: {{A Large Language Model}} for {{Finance}}},
+  shorttitle = {{{BloombergGPT}}},
+  author = {Wu, Shijie and Irsoy, Ozan and Lu, Steven and Dabravolski, Vadim and Dredze, Mark and Gehrmann, Sebastian and Kambadur, Prabhanjan and Rosenberg, David and Mann, Gideon},
+  date = {2023-05-09},
+  eprint = {2303.17564},
+  eprinttype = {arxiv},
+  eprintclass = {cs, q-fin},
+  doi = {10.48550/arXiv.2303.17564},
+  url = {http://arxiv.org/abs/2303.17564},
+  urldate = {2023-11-14},
+  abstract = {The use of NLP in the realm of financial technology is broad and complex, with applications ranging from sentiment analysis and named entity recognition to question answering. Large Language Models (LLMs) have been shown to be effective on a variety of tasks; however, no LLM specialized for the financial domain has been reported in literature. In this work, we present BloombergGPT, a 50 billion parameter language model that is trained on a wide range of financial data. We construct a 363 billion token dataset based on Bloomberg's extensive data sources, perhaps the largest domain-specific dataset yet, augmented with 345 billion tokens from general purpose datasets. We validate BloombergGPT on standard LLM benchmarks, open financial benchmarks, and a suite of internal benchmarks that most accurately reflect our intended usage. Our mixed dataset training leads to a model that outperforms existing models on financial tasks by significant margins without sacrificing performance on general LLM benchmarks. Additionally, we explain our modeling choices, training process, and evaluation methodology. We release Training Chronicles (Appendix C) detailing our experience in training BloombergGPT.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning,Quantitative Finance - General Finance},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/XFNYFRPU/Wu et al. - 2023 - BloombergGPT A Large Language Model for Finance.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/WU3CWR4B/2303.html}
+}
+
 @online{wuEVAEEvolutionaryVariational2023,
   title = {{{eVAE}}: {{Evolutionary Variational Autoencoder}}},
   shorttitle = {{{eVAE}}},
@@ -3211,6 +3565,57 @@
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/UJ6KUBLW/Xiao et al. - 2017 - Fashion-MNIST a Novel Image Dataset for Benchmark.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/9C2ADIEB/1708.html}
 }
 
+@online{xiePIXIULargeLanguage2023,
+  title = {{{PIXIU}}: {{A Large Language Model}}, {{Instruction Data}} and {{Evaluation Benchmark}} for {{Finance}}},
+  shorttitle = {{{PIXIU}}},
+  author = {Xie, Qianqian and Han, Weiguang and Zhang, Xiao and Lai, Yanzhao and Peng, Min and Lopez-Lira, Alejandro and Huang, Jimin},
+  date = {2023-06-08},
+  eprint = {2306.05443},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2306.05443},
+  url = {http://arxiv.org/abs/2306.05443},
+  urldate = {2023-12-04},
+  abstract = {Although large language models (LLMs) has shown great performance on natural language processing (NLP) in the financial domain, there are no publicly available financial tailtored LLMs, instruction tuning datasets, and evaluation benchmarks, which is critical for continually pushing forward the open-source development of financial artificial intelligence (AI). This paper introduces PIXIU, a comprehensive framework including the first financial LLM based on fine-tuning LLaMA with instruction data, the first instruction data with 136K data samples to support the fine-tuning, and an evaluation benchmark with 5 tasks and 9 datasets. We first construct the large-scale multi-task instruction data considering a variety of financial tasks, financial document types, and financial data modalities. We then propose a financial LLM called FinMA by fine-tuning LLaMA with the constructed dataset to be able to follow instructions for various financial tasks. To support the evaluation of financial LLMs, we propose a standardized benchmark that covers a set of critical financial tasks, including five financial NLP tasks and one financial prediction task. With this benchmark, we conduct a detailed analysis of FinMA and several existing LLMs, uncovering their strengths and weaknesses in handling critical financial tasks. The model, datasets, benchmark, and experimental results are open-sourced to facilitate future research in financial AI.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/RJLTBGMM/Xie et al. - 2023 - PIXIU A Large Language Model, Instruction Data an.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/AW6UWFEK/2306.html}
+}
+
+@online{yangFinBERTPretrainedLanguage2020,
+  title = {{{FinBERT}}: {{A Pretrained Language Model}} for {{Financial Communications}}},
+  shorttitle = {{{FinBERT}}},
+  author = {Yang, Yi and UY, Mark Christopher Siy and Huang, Allen},
+  date = {2020-07-08},
+  eprint = {2006.08097},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2006.08097},
+  url = {http://arxiv.org/abs/2006.08097},
+  urldate = {2023-12-04},
+  abstract = {Contextual pretrained language models, such as BERT (Devlin et al., 2019), have made significant breakthrough in various NLP tasks by training on large scale of unlabeled text re-sources.Financial sector also accumulates large amount of financial communication text.However, there is no pretrained finance specific language models available. In this work,we address the need by pretraining a financial domain specific BERT models, FinBERT, using a large scale of financial communication corpora. Experiments on three financial sentiment classification tasks confirm the advantage of FinBERT over generic domain BERT model. The code and pretrained models are available at https://github.com/yya518/FinBERT. We hope this will be useful for practitioners and researchers working on financial NLP tasks.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/T2UA4ASC/Yang et al. - 2020 - FinBERT A Pretrained Language Model for Financial.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/ULTMBN8T/2006.html}
+}
+
+@online{yangFinGPTOpenSourceFinancial2023,
+  title = {{{FinGPT}}: {{Open-Source Financial Large Language Models}}},
+  shorttitle = {{{FinGPT}}},
+  author = {Yang, Hongyang and Liu, Xiao-Yang and Wang, Christina Dan},
+  date = {2023-06-09},
+  eprint = {2306.06031},
+  eprinttype = {arxiv},
+  eprintclass = {cs, q-fin},
+  doi = {10.48550/arXiv.2306.06031},
+  url = {http://arxiv.org/abs/2306.06031},
+  urldate = {2023-11-14},
+  abstract = {Large language models (LLMs) have shown the potential of revolutionizing natural language processing tasks in diverse domains, sparking great interest in finance. Accessing high-quality financial data is the first challenge for financial LLMs (FinLLMs). While proprietary models like BloombergGPT have taken advantage of their unique data accumulation, such privileged access calls for an open-source alternative to democratize Internet-scale financial data. In this paper, we present an open-source large language model, FinGPT, for the finance sector. Unlike proprietary models, FinGPT takes a data-centric approach, providing researchers and practitioners with accessible and transparent resources to develop their FinLLMs. We highlight the importance of an automatic data curation pipeline and the lightweight low-rank adaptation technique in building FinGPT. Furthermore, we showcase several potential applications as stepping stones for users, such as robo-advising, algorithmic trading, and low-code development. Through collaborative efforts within the open-source AI4Finance community, FinGPT aims to stimulate innovation, democratize FinLLMs, and unlock new opportunities in open finance. Two associated code repos are \textbackslash url\{https://github.com/AI4Finance-Foundation/FinGPT\} and \textbackslash url\{https://github.com/AI4Finance-Foundation/FinNLP\}},
+  pubstate = {preprint},
+  keywords = {LLM\_finance},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/LUQ87YNX/Yang et al. - 2023 - FinGPT Open-Source Financial Large Language Model.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/BTU5ZHZX/2306.html}
+}
+
 @online{yangSeqZeroFewshotCompositional2022,
   title = {{{SeqZero}}: {{Few-shot Compositional Semantic Parsing}} with {{Sequential Prompts}} and {{Zero-shot Models}}},
   shorttitle = {{{SeqZero}}},
@@ -3225,6 +3630,23 @@
   pubstate = {preprint},
   keywords = {Computer Science - Computation and Language},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/MDFC5GK3/Yang et al. - 2022 - SeqZero Few-shot Compositional Semantic Parsing w.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/U3TBMKB3/2205.html}
+}
+
+@online{yaoReActSynergizingReasoning2023,
+  title = {{{ReAct}}: {{Synergizing Reasoning}} and {{Acting}} in {{Language Models}}},
+  shorttitle = {{{ReAct}}},
+  author = {Yao, Shunyu and Zhao, Jeffrey and Yu, Dian and Du, Nan and Shafran, Izhak and Narasimhan, Karthik and Cao, Yuan},
+  date = {2023-03-09},
+  eprint = {2210.03629},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2210.03629},
+  url = {http://arxiv.org/abs/2210.03629},
+  urldate = {2023-11-16},
+  abstract = {While large language models (LLMs) have demonstrated impressive capabilities across tasks in language understanding and interactive decision making, their abilities for reasoning (e.g. chain-of-thought prompting) and acting (e.g. action plan generation) have primarily been studied as separate topics. In this paper, we explore the use of LLMs to generate both reasoning traces and task-specific actions in an interleaved manner, allowing for greater synergy between the two: reasoning traces help the model induce, track, and update action plans as well as handle exceptions, while actions allow it to interface with external sources, such as knowledge bases or environments, to gather additional information. We apply our approach, named ReAct, to a diverse set of language and decision making tasks and demonstrate its effectiveness over state-of-the-art baselines, as well as improved human interpretability and trustworthiness over methods without reasoning or acting components. Concretely, on question answering (HotpotQA) and fact verification (Fever), ReAct overcomes issues of hallucination and error propagation prevalent in chain-of-thought reasoning by interacting with a simple Wikipedia API, and generates human-like task-solving trajectories that are more interpretable than baselines without reasoning traces. On two interactive decision making benchmarks (ALFWorld and WebShop), ReAct outperforms imitation and reinforcement learning methods by an absolute success rate of 34\% and 10\% respectively, while being prompted with only one or two in-context examples. Project site with code: https://react-lm.github.io},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/TXS3DBLZ/Yao et al. - 2023 - ReAct Synergizing Reasoning and Acting in Languag.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/IH5PDLZF/2210.html}
 }
 
 @inproceedings{yuNamedEntityRecognition2020,
@@ -3256,6 +3678,23 @@
   pubstate = {preprint},
   keywords = {Statistics - Machine Learning},
   file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/4UPVYMQY/Yurochkin et al. - 2020 - Training individually fair ML models with Sensitiv.pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/AFPMCLF5/1907.html}
+}
+
+@online{yuWhiteBoxTransformersSparse2023,
+  title = {White-{{Box Transformers}} via {{Sparse Rate Reduction}}: {{Compression Is All There Is}}?},
+  shorttitle = {White-{{Box Transformers}} via {{Sparse Rate Reduction}}},
+  author = {Yu, Yaodong and Buchanan, Sam and Pai, Druv and Chu, Tianzhe and Wu, Ziyang and Tong, Shengbang and Bai, Hao and Zhai, Yuexiang and Haeffele, Benjamin D. and Ma, Yi},
+  date = {2023-11-21},
+  eprint = {2311.13110},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2311.13110},
+  url = {http://arxiv.org/abs/2311.13110},
+  urldate = {2023-11-23},
+  abstract = {In this paper, we contend that a natural objective of representation learning is to compress and transform the distribution of the data, say sets of tokens, towards a low-dimensional Gaussian mixture supported on incoherent subspaces. The goodness of such a representation can be evaluated by a principled measure, called sparse rate reduction, that simultaneously maximizes the intrinsic information gain and extrinsic sparsity of the learned representation. From this perspective, popular deep network architectures, including transformers, can be viewed as realizing iterative schemes to optimize this measure. Particularly, we derive a transformer block from alternating optimization on parts of this objective: the multi-head self-attention operator compresses the representation by implementing an approximate gradient descent step on the coding rate of the features, and the subsequent multi-layer perceptron sparsifies the features. This leads to a family of white-box transformer-like deep network architectures, named CRATE, which are mathematically fully interpretable. We show, by way of a novel connection between denoising and compression, that the inverse to the aforementioned compressive encoding can be realized by the same class of CRATE architectures. Thus, the so-derived white-box architectures are universal to both encoders and decoders. Experiments show that these networks, despite their simplicity, indeed learn to compress and sparsify representations of large-scale real-world image and text datasets, and achieve performance very close to highly engineered transformer-based models: ViT, MAE, DINO, BERT, and GPT2. We believe the proposed computational framework demonstrates great potential in bridging the gap between theory and practice of deep learning, from a unified perspective of data compression. Code is available at: https://ma-lab-berkeley.github.io/CRATE .},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language,Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning},
+  file = {/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/VRY5PXRP/Yu et al. - 2023 - White-Box Transformers via Sparse Rate Reduction .pdf;/home/sebacastillo/snap/zotero-snap/common/Zotero/storage/QYCGLLLH/2311.html}
 }
 
 @online{zagoruykoWideResidualNetworks2017,
