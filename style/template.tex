@@ -27,8 +27,15 @@ $endif$
 
 $if(linestretch)$
 \usepackage{setspace}
-\setstretch{$linestretch$}
+% \setstretch{$linestretch$}
+\singlespacing
+\raggedbottom
 $endif$
+
+\usepackage{setspace}
+% \setstretch{$linestretch$}
+\singlespacing
+\raggedbottom
 
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -205,7 +212,7 @@ $endfor$
     % to remove the UCL header logo
     \ThisULCornerWallPaper{1.0}{style/utn_logo.png}
 
-        \vspace*{2.5cm}
+        \vspace*{4.5cm}
 
         \normalsize
         GENERACIÓN DE DATOS SINTÉTICOS CON AUTOENCODERS VARIACIONALES Y SU IMPACTO EN LA SELECCION DE CARACTERÍSTICAS MEDIANTE ALGORITMOS GENÉTICOS
@@ -230,15 +237,15 @@ $endfor$
         \Large
         $author$
 
-        \vspace{1.5cm}
+        \vspace{2.5cm}
         
-        \vfill
+        %\vfill
 
         \normalsize
         Dirigida por:\\
         $for(supervisor)$$supervisor$$sep$ \\ $endfor$
 
-        \vspace{0.8cm}
+        \vspace{1.5cm}
 
         % Uncomment the following line
         % to add a centered university logo
